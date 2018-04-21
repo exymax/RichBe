@@ -1,0 +1,2 @@
+# RichBe
+RichBe landing page
