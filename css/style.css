@@ -1,7 +1,3 @@
-body{
-    margin:0;
-    padding:0;
-}
 @font-face{
     font-family:'Akrobat ExtraBold';
     src:url(../fonts/Fonts_RichBe/Akrobat-ExtraBold.otf) format('opentype');
@@ -18,6 +14,10 @@ body{
     font-family:'Akrobat Bold';
     src:url(../fonts/Fonts_RichBe/Akrobat-SemiBold.otf) format('opentype');
 }
+body{
+    margin:0;
+    padding:0;
+}
 div.wrapper{
     padding-top:107px;
     width:100%;
@@ -33,9 +33,36 @@ div.wrapper{
 .upper-case{
     text-transform: uppercase;
 }
-div.guarant-banner-wrap{
-    max-width:1425px;
-    margin:0 auto;
+div.wrapper div.guarant-banner-wrap{
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index: 30;
+}
+div.wrapper .wrap-head{
+    max-width: 1338px;
+    padding-left: 193px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 730px;
+}
+aside.banners{
+    position: relative;
+    /*top:0;
+    right:5px;*/
+    width:300px;
+    height:710px;
+}
+div.wrapper .guarant{
+    position: relative;
+    /*left: 30px;*/
+    top: 18px;
+    width:365px;
+    height:260px;
+    background:url('../images/guarantee.png');
+    z-index:8;
 }
 div.inner-wrap{
     max-width:995px;
@@ -47,15 +74,6 @@ div.wrapper .rich-man{
     left: -29px;
     top: 6px;
     z-index: 7;
-}
-div.wrapper .guarant{
-    position: absolute;
-    left: 388px;
-    top: 18px;
-    width:365px;
-    height:260px;
-    background:url('../images/guarantee.png');
-    z-index:8;
 }
 div.wrapper .top-left-angle{
     position: absolute;
@@ -117,7 +135,8 @@ span.of-year::after{
    content:url('../images/star.png');
 }
 span.of-year{
-    width:100px;
+    width: 111px;
+    padding-left: 18px;
     margin: 9px -2px 0 7px;
 }
 span.of-year::before{
@@ -221,16 +240,12 @@ section.about-school .inner-wrap{
     justify-content: center;
     align-items: center;
     margin-top: 22px;
-    margin-left: 474px;
+    padding-right: 40px;
+}
+div.purposes span{
+    font-family: "Akrobat ExtraBold"; 
 }
 
-aside.banners{
-    position: absolute;
-    top:0;
-    right:192px;
-    width:300px;
-    height:710px;
-}
 aside.banners .want-banner,
 aside.banners .selection-banner
 {
@@ -266,7 +281,7 @@ aside.banners .want-banner-wrap{
 aside.banners .selection-banner-wrap{
     margin-top: -10px;
     height:288px;
-    width:270px;
+    width:273px;
     background-color: rgb(32, 47, 105);
     box-shadow: 0px 7px 11.9px 2.1px rgba(0, 0, 0, 0.69);
     z-index:4;
@@ -284,16 +299,16 @@ aside .selection-banner{
     right: 6px;
 }
 .btn{
-    background: red;
+    background: #ca0001;
     font-size: 37px;
     border:none;
     padding:0;
 }
 .btn p{
-    border-top: 1px dashed rgb(255, 255, 255);
-    border-bottom:1px dashed rgb(255, 255, 255);
-    margin-top: 2px;
-    padding: 8px;
+    border-top: 2px dashed rgb(255, 255, 255);
+    border-bottom:2px dashed rgb(255, 255, 255);
+    margin-top: 3px;
+    padding: 6px;
     line-height: 1.2;
 }
 aside.banners h2{
@@ -340,23 +355,34 @@ aside.banners ul>li:nth-child(2){
     opacity: 0.5;
 }
 
-section.your-result{
+/*section.your-result{
 background:url('../images/your_result.png') no-repeat;
 height: 137px;
 margin-left: 170px;
+}*/
+section.your-result .inner-wrap{
+    max-width: 1580px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 137px;
+    background: url(../images/your_result.png) no-repeat;
 }
 section.your-result h3{
     width: 733px;
     text-align: left;
     font-size: 40px;
     line-height: 1.2;
-    position: relative;
+    margin:0 auto;
+    padding-top: 21px;
+    padding-right: 159px;
+    /*position: relative;
     top: 21px;
-    right: 33px;
+    right: 33px;*/
 }
 section.request .inner-wrap{
     margin-top: 30px;
-    margin-left: 516px;
+    padding-left: 107px;
 }
 section.request .confirm-politic{
     margin-top: -14px;
@@ -402,6 +428,9 @@ section.request span{
     display:block;
     margin-top:23px;
 }
+section.request .confirm-politic{
+    position: relative;
+}
 section.request .confirm-politic p{
     font-family: 'Akrobat Regular';
     font-size: 20px;
@@ -413,14 +442,32 @@ color:white;
 section.request .confirm-politic input{
     display:none;
 }
-
+section.request .check-mark{
+    position:absolute;
+    top: -5px;
+    left: -37px;
+ width:26px;
+ height:26px;
+ border:2px solid white;
+border-radius: 50%;
+}
+section.request .check-mark img{
+    margin-left: 3px;
+    /*visibility: hidden;*/
+}
+/*section.request .check-mark img:checked{
+    visibility: visible;
+}*/
 footer{
-    max-width:1916px;
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
     height: 83px;
+    width:100%;
+  }
+  footer .inner-footer{
+    max-width:1830px;
+    width: 100%;
     display:flex;
     justify-content: space-between;
     margin:0 auto;
@@ -430,13 +477,8 @@ footer{
      text-decoration: dashed underline white;
      color:white;
      font-size:25px;
-     z-index:35;
-  }
-  footer a:first-child{
-      margin-left:52px;
-  }
-  footer a:last-child{
-      margin-right:52px;
+     position: relative;
+     z-index: 15;
   }
 
   div.social-icons ul{
