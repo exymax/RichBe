@@ -21,17 +21,16 @@ body{
 div.wrapper{
     padding-top:107px;
     width:100%;
-    height:1128px;
     background:url("../images/bg_page.jpg");
     z-index: 0;
     position:relative;
-    /*display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;*/
+    padding-bottom: 15px;
 }
 .upper-case{
     text-transform: uppercase;
+}
+button:hover{
+cursor: pointer;
 }
 div.wrapper div.guarant-banner-wrap{
     position:absolute;
@@ -61,7 +60,7 @@ div.wrapper .guarant{
     top: 18px;
     width:365px;
     height:260px;
-    background:url('../images/guarantee.png');
+    background:url('../images/guarantee.png') no-repeat;
     z-index:8;
 }
 div.inner-wrap{
@@ -95,6 +94,7 @@ div.wrapper .guarant-content{
     flex-direction: column;
     justify-content:space-between;
     align-items:center;
+    margin:0 auto;
     margin-top: 92px;
 }
 header div.logo{
@@ -202,6 +202,8 @@ section.our-school-represent h3{
     text-align: center;
     margin: 0 auto;
     margin-top: -21px;
+    position:relative;
+    z-index:9;
 }
 section.our-school-represent .our-school-text{
     width:593px;
@@ -354,12 +356,21 @@ opacity: 0.2;
 aside.banners ul>li:nth-child(2){
     opacity: 0.5;
 }
-
-/*section.your-result{
-background:url('../images/your_result.png') no-repeat;
-height: 137px;
-margin-left: 170px;
-}*/
+aside.banners >div>div{
+    animation: animatebanner 5s ease-in-out infinite alternate;
+    /*animation: animation-name animation-duration animation-timing-function 
+    animation-delay animation-iteration-count animation-direction;*/
+}
+aside.banners >div>div:hover{
+    transition: .5s;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+@keyframes animatebanner{
+    to {
+        box-shadow: 0 0 50px rgb(255, 255, 255);
+    }
+  }
+  
 section.your-result .inner-wrap{
     max-width: 1580px;
     width: 100%;
@@ -367,6 +378,8 @@ section.your-result .inner-wrap{
     margin-top: 40px;
     height: 137px;
     background: url(../images/your_result.png) no-repeat;
+    position: relative;
+    z-index: 11;
 }
 section.your-result h3{
     width: 733px;
@@ -383,16 +396,15 @@ section.your-result h3{
 section.request .inner-wrap{
     margin-top: 30px;
     padding-left: 107px;
+    position: relative;
+    z-index:12;
 }
 section.request .confirm-politic{
     margin-top: -14px;
 }
-section.request input,
-section.request button
+section.request button,
+div.request-content button
 {
-    z-index:30;
-}
-section.request button{
     width: 227px;
     height: 66px;
     font-size: 30px;
@@ -400,11 +412,15 @@ section.request button{
     left: 5px;
     top: 2px;
 }
-section.request button p{
+section.request button p,
+div.request-content button{
     padding:12px;
 }
 section.request input[type="text"],
-section.request input[type="email"]{
+section.request input[type="email"],
+div.request-content input[type="text"],
+div.request-content input[type="email"]
+{
     font-family: 'Akrobat Regular';
     font-size:22px;
     width: 208px;
@@ -412,37 +428,48 @@ section.request input[type="email"]{
     margin-right: 9px;
     background:transparent;
     border:2px solid white;
-    color: white;
   line-height: 1.2;
   text-align: left;
 }
-section.request input:last-child{
+section.request input:last-child,
+div.request-content input:last-child
+{
     margin-right:12px;
 }
-section.request input[placeholder]
+section.request input[placeholder],
+div.request-content input[placeholder]
 {
 padding-left:16px;
 }
+::-webkit-input-placeholder {color:white; opacity:1;}
 section.request span{
     font-size:30px;
     display:block;
     margin-top:23px;
 }
-section.request .confirm-politic{
+section.request .confirm-politic,
+div.request-content .confirm-politic{
     position: relative;
 }
-section.request .confirm-politic p{
+section.request .confirm-politic p,
+div.request-content .confirm-politic p
+{
     font-family: 'Akrobat Regular';
     font-size: 20px;
     margin-top: 25px;
 }
-section.request p.white-word a{
+section.request p.white-word a,
+div.request-content p.white-word a
+{
 color:white;
 }
-section.request .confirm-politic input{
+section.request .confirm-politic input,
+div.request-content .confirm-politic input
+{
     display:none;
 }
-section.request .check-mark{
+section.request .check-mark,
+div.request-content .check-mark{
     position:absolute;
     top: -5px;
     left: -37px;
@@ -451,7 +478,9 @@ section.request .check-mark{
  border:2px solid white;
 border-radius: 50%;
 }
-section.request .check-mark img{
+section.request .check-mark img,
+div.request-content .check-mark img
+{
     margin-left: 3px;
     /*visibility: hidden;*/
 }
@@ -465,6 +494,7 @@ footer{
     height: 83px;
     width:100%;
   }
+
   footer .inner-footer{
     max-width:1830px;
     width: 100%;
@@ -485,8 +515,12 @@ footer{
       list-style: none;
   }
   ul.socials li{
-    z-index:30;
     position:absolute;
+    z-index:30;
+  }
+  ul.socials li img{
+      width:52px;
+      height:52px;
   }
   ul.socials li:nth-child(1){
     bottom: 205px;
@@ -512,3 +546,396 @@ footer{
     bottom: 346px;
     left: 739px;
   }
+div.dark-bg{
+width:100%;
+height:100%;
+position: absolute;
+top:0;
+left:0;
+background-color: rgba(0,0,0,0.7);
+z-index: 45;
+}
+div.request-window{
+    position: absolute;
+    width:1297px;
+    height:1087px;
+    background:url("../images/bg_page.jpg");
+    margin:0 auto;
+    z-index:50;
+    left:16.25%;
+    top:7.75%;
+}
+div.request-window img{
+    position: absolute;
+}
+div.request-window .request-top-left{
+top:0;
+left:0;
+}
+div.request-window img.request-bottom-right{
+    bottom:0;
+    right:0; 
+}
+div.request-window .request-content{
+    position: relative;
+    z-index:70;
+    max-width:1034px;
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 82px;
+}
+div.request-window p.request-text{
+    margin-bottom: 93px;
+}
+div.request-window p.request-text,
+div.request-content div.textarea-title{
+    font-family: "Akrobat ExtraBold";
+    font-size: 30px;
+    text-align: left;
+    color:white;
+}
+div.request-content div.textarea-title{
+    width: 142px;
+    height: 89px;
+    background: #f7de8f;
+    text-transform: uppercase;
+    color: black;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 22px;
+    float:left;
+    margin-left:0;
+}
+div.request-content div.request-item{
+    height:130px;
+    margin-bottom:54px;
+}
+div.request-content textarea{
+    border:2px solid white;
+    font-family: "Akrobat Regular";
+    background:transparent;
+    color:white;
+    float:right;
+    font-size: 20px;
+    height: 60px;
+    width: 826px;
+    margin-right: 0;
+    padding: 20px;
+}
+div.request-content div.last{
+    margin-bottom:60px;
+}
+div.request-content  button{
+    width: 307px;
+    height: 65px;
+    top: 1px;
+    padding: 3px;
+}
+div.request-window .close-popup{
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: url(../images/closet.png) no-repeat;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
+    z-index: 80;
+}
+div.hide-request{
+    display:none;
+}
+@media screen and (max-width:1760px){
+    .wrap-head div.guarant{
+        background-size: 340px 243px;
+        left:80px;
+    }
+    .wrap-head div.guarant .guarant-content{
+        padding-right: 25px;
+        margin-top: 78px;
+    }
+    img.rich-man{
+        width:auto;
+        height:920px;
+    }
+    img.top-left-angle{
+    width:910px;
+    height:auto;
+    }
+    div.bottom-right-angle img{
+        width:1025px;
+        height:auto;
+    }
+    footer .inner-footer{
+    max-width:1495px;
+    }
+      }
+    
+      @media screen and (max-width:1650px){
+        img.rich-man{
+            width:auto;
+            height:850px;
+            top:20px;
+        }  
+      }
+      
+      @media screen and (max-width:1600px){
+        img.rich-man{
+            width:auto;
+            height:808px;
+        }  
+        section.our-school-represent  h1{
+    font-size: 58px
+       }
+       section.our-school-represent h3{
+    font-size:20px;
+       }
+       section.about-school .inner-wrap{
+           padding-right:0;
+           padding-left:69px;
+       }
+        img.top-left-angle{
+            width:860px;
+            height:auto;
+            }
+            div.bottom-right-angle img{
+                width:935px;
+                height:auto;
+            }
+    
+            aside.banners{
+                height: 689px;
+            }
+            aside.banners .want-banner,
+    aside.banners .selection-banner
+    {
+        width: 247px;
+    }
+    aside .want-banner{
+        height: 383px;
+    }
+    aside .want-banner .banner-img img{
+        width: 163px;
+        height: auto;
+    }
+    aside.banners .want-banner-wrap{
+        width: 258px;
+        height: 392px;
+    }
+    aside.banners .selection-banner-wrap{
+        height: 282px;
+        width: 258px;
+    }
+    aside .btn{
+        width: 231px;
+    }
+    aside .selection-banner{
+        height: 270px;
+        right: 11px;
+    }
+    .btn{
+        font-size: 36px;
+    }
+    .btn p{
+        border-top: 2px dashed rgb(255, 255, 255);
+        border-bottom:2px dashed rgb(255, 255, 255);
+        margin-top: 3px;
+        padding: 6px;
+        line-height: 1.2;
+    }
+    aside.banners h2{
+        font-size: 38px;
+    }
+    aside .want-banner h2{
+        top: -31px;
+        margin-bottom: -22px;
+    }
+    aside .selection-banner h2 span{
+        font-size:43px;
+    }
+    aside div.phrases-banner{
+        font-size: 18px;
+    }
+    section.your-result .inner-wrap{
+        height: 121px;
+    }
+    section.your-result h3 {
+        font-size: 36px;
+    }
+    section.request .inner-wrap{
+        margin-top: 67px;
+        padding-left: 90px;
+    }
+       }
+
+    @media screen and (max-width:1530px){
+        .wrap-head div.guarant{
+            background-size: 297px;
+            left:117px;
+        }
+        .wrap-head div.guarant .guarant-content{
+            padding-right: 63px;
+            margin-top: 66px;
+        }
+        .wrap-head div.guarant .guarant-content .guarant-title img{
+            width:105px;
+        }
+        .wrap-head div.guarant .guarant-content .year-number img{
+            width:40px;
+        }
+        span.year-number::before, span.year-number::after{
+            width:30px;
+        }
+        .wrap-head div.guarant .guarant-content .year-number img{
+            width:51px;
+        }
+        span.of-year{
+            width:100px;
+            margin-right:12px;
+        }
+        span.year-number{
+            width:121px;
+        }
+        img.rich-man{
+            width:auto;
+            height:880px;
+        }
+        img.top-left-angle{
+        width:780px;
+        height:auto;
+        }
+        div.bottom-right-angle img{
+            width: 867px;
+            height: 483px;
+        }
+        footer .inner-footer{
+            max-width:1412px;
+            }
+            section.your-result .inner-wrap{
+                height: 119px;
+            }
+            section.your-result h3 {
+                font-size: 35px;
+                margin-left: 401px;
+            }
+            section.about-school .inner-wrap {
+                padding-left: 163px;
+            }
+    }
+    @media screen and (max-width:1500px){
+        aside.banners .selection-banner
+        {
+            width: 247px;
+        }
+        aside .want-banner{
+            height: 377px;
+        }
+        aside.banners .want-banner-wrap{
+            width: 253px;
+            height: 388px;
+        }
+        aside.banners .selection-banner-wrap{
+            height: 273px;
+            width: 252px;
+        }
+        aside .btn{
+            width: 219px;
+        }
+        aside .selection-banner{
+            height: 270px;
+            right: 11px;
+        }
+        aside.banners h2{
+            font-size: 35px;
+        }
+        aside .want-banner h2{
+            top: -26px;
+    margin-bottom: -22px;
+        }
+        aside div.phrases-banner{
+            font-size: 17px;
+            width: 82px;
+            margin-top: 3px;
+        }
+        aside.banners {
+            right: 53px;
+        }
+        aside.banners .want-banner, aside.banners .selection-banner {
+            width: 241px;
+        }
+        aside.banners .selection-banner{
+            height: 261px;
+        }
+    }
+    @media screen and (max-width:1439px){
+        aside.banners{
+            right: 80px;
+        }
+        img.rich-man{
+            width:auto;
+            height:816px;
+        }
+        footer .inner-footer{
+            max-width:1358px;
+            }
+    }
+    @media screen and (max-width:1415px){
+        aside.banners{
+            right: 100px;
+        }
+    }
+    @media screen and (max-width:1397px){
+        aside .want-banner{
+            height: 348px;
+        }
+        aside.banners .want-banner-wrap{
+            width: 232px;
+            height: 359px;
+        }
+        aside.banners .selection-banner-wrap{
+            height: 243px;
+            width: 232px;
+        }
+        aside .btn{
+            width: 207px;
+            height: 65px;
+        }
+        aside.banners h2{
+            font-size: 33px;
+        }
+        aside .want-banner h2{
+            top: -22px;
+    margin-bottom: -22px;
+        }
+        aside div.phrases-banner{
+            font-size: 16px;
+            width: 77px;
+            margin-bottom: -22px;
+        }
+        aside.banners {
+            right: 100px;
+        }
+        aside.banners .want-banner, aside.banners .selection-banner {
+            width: 221px;
+        }
+        .btn p {
+            margin-top: 3px;
+            padding: 6px;
+        }
+        aside .selection-banner h2 span{
+            font-size:39px;
+        }
+        aside.banners ul{
+            margin-top: -22px;
+            margin-bottom: 10px;
+        }
+        aside.banners .selection-banner
+        {
+            height: 233px;
+            width: 221px;
+        }
+    }

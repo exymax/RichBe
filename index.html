@@ -24,7 +24,7 @@
                                     <h2 class="banner-title upper-case gold-word">хочу</h2>
                                     <div class="phrases-banner upper-case white-word">много быстро только мне</div>
                                     <div class="banner-img"><img src="./images/i_want.png" alt="gifts" class="gifts-img"></div> 
-                                    <button class="select-banner-btn btn gold-word" name="press-here" id="press-here"> <p> жми сюда</p></button>
+                                    <button class="want-banner-btn btn gold-word" name="press-here" id="press-here"> <p> жми сюда</p></button>
                                 </div></div>
                                 <div class="selection-banner-wrap">
                                         <div class="selection-banner">
@@ -34,7 +34,7 @@
                                                     <li><img src="./images/arrow_figure.png"></li>
                                                     <li><img src="./images/arrow_figure.png"></li>
                                                 </ul>
-                                                <button class="want-banner-btn btn gold-word" name="press-need" id="press-need"><p>надо</p></button>
+                                                <button class="select-banner-btn btn gold-word" name="press-need" id="press-need"><p>надо</p></button>
                                         </div>
                                 </div>
                         </aside>
@@ -96,7 +96,7 @@
                                 <input type="checkbox" name="politic-check" id="politic-check" checked>
                                 <div class="check-mark"><img src="./images/check1.png"></div>
                                 <p class="white-word"> Нажимая на кнопку ОТПРАВИТЬ, 
-                                        вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                                        вы соглашаетесь с <a href="./docs/conf_politic.docx">политикой конфиденциальности</a></p>
                                </div>
                         </div>
                     </form>
@@ -105,23 +105,61 @@
      </main>
      <footer class="white-word">
          <div class="inner-footer">
-                <a href="#" class="linked-site white-word">богатаяжизнь.рф</a>
-                <a href="#" class="conf-politic white-word">Политика конфиденциальности</a>
+                <a href="http://xn--80aabirgg5bc6byh5a.xn--p1ai/" class="linked-site white-word" target="_blank">богатаяжизнь.рф</a>
+                <a href="./docs/conf_politic.docx" class="conf-politic white-word" target="_blank">Политика конфиденциальности</a>
          </div>
      </footer>
 <div class="bottom-right-angle">
     <div class="social-icons">
         <ul class="socials">
-            <li><a><img src="./images/skype.png"></a></li>
-            <li><a><img src="./images/telegram.png"></a></li>
-            <li><a><img src="./images/youtube.png"></a></li>
-            <li><a><img src="./images/vk.png"></a></li>
-            <li><a><img src="./images/facebook.png"></a></li>
-            <li><a><img src="./images/instagram.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/skype.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/telegram.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/youtube.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/vk.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/facebook.png"></a></li>
+            <li><a href="#" target="_blank"><img src="./images/instagram.png"></a></li>
         </ul>
     </div>
     <img src="./images/redAngle_bottom_right.png">
 </div>
+<div class="dark-bg hide-request"></div>
+    <div class="request-window hide-request">
+        <img src="./images/request-top-left.png" class="request-top-left">
+        <img src="./images/new-angle-red-white.png" class="request-bottom-right">
+        <div class="close-popup"><span>&nbsp;</span></div>
+        <div class="request-content">
+                <p class="request-text">
+                        Добрый день!<br>Напишите, чего Вы хотите, а мы сделаем
+                        действительностью Ваши желания.<br>
+                        Опишите своё личное видение = Ваши цели + навыки + желания.
+                </p>
+                <div class="request-item">
+                    <div class="textarea-title goal">моя <br>цель:</div>
+                    <textarea name="" id="" cols="30" rows="7">Например: быстро срубить денег, словить удачу за хвост...</textarea>
+                </div>
+                <div class="request-item">
+                        <div class="textarea-title skills">мой <br>навык:</div>
+                        <textarea name="" id="" cols="30" rows="7">Например: владею навыками продаж...</textarea>
+                    </div>
+                    <div class="request-item last">
+                            <div class="textarea-title wishes">моё <br>желание:</div>
+                            <textarea name="" id="" cols="30" rows="7">Например: больше путешествовать, купить свой дом...</textarea>
+                        </div>
+                        <form method="post">
+                                <input type="text" name="fio" id="fio" placeholder="ФИО:" required>
+                                <input type="text" name="phone" id="pnone" placeholder="Тел:" required>
+                                <input type="email" name="mail" id="mail" placeholder="E-mail:" required>
+                                <button name="submit" id="submit" class="submit gold-word btn upper-case"><p>исполнить быстро</p></button>
+                                    <div class="confirm-politic">
+                                        <input type="checkbox" name="politic-check" id="politic-check" checked>
+                                        <div class="check-mark"><img src="./images/check1.png"></div>
+                                        <p class="white-word"> Нажимая на кнопку ИСПОЛНИТЬ БЫСТРО, 
+                                                вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                                       </div>
+                            </form>
+        </div>
     </div>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
