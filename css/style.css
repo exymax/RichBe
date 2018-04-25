@@ -568,7 +568,7 @@ left:0;
 background-color: rgba(0,0,0,0.7);
 z-index: 45;
 }
-div.request-window{
+/*div.request-window{
     position: absolute;
     width:1297px;
     height:1087px;
@@ -577,7 +577,28 @@ div.request-window{
     z-index:50;
     left:16.25%;
     top:7.75%;
+}*/
+div.request-window {
+    position: absolute;
+    width: 67.5%;
+    max-width: 1297px;
+    height: 86.9%;
+    background: url(../images/bg_page.jpg);
+    margin: 0 auto;
+    z-index: 50;
+    left: 16.25%;
+    top: 7.75%;
+    margin-top: -1.5%;
 }
+div.request-window .request-top-left{
+    width: 80%;
+    height: 55.2%;
+}
+div.request-window img.request-bottom-right{
+    width: 69.4%;
+    height: 47.83%;
+}
+
 div.request-window img{
     position: absolute;
 }
@@ -589,19 +610,20 @@ div.request-window img.request-bottom-right{
     bottom:0;
     right:0; 
 }
-div.request-window .request-content{
+div.request-window .request-content {
     position: relative;
-    z-index:70;
-    max-width:1034px;
-    width:100%;
-    margin:0 auto;
-    display:flex;
+    z-index: 70;
+    max-width: 1032px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 82px;
+    padding-top: 6.5%;
 }
-div.request-window p.request-text{
-    margin-bottom: 93px;
+div.request-window p.request-text {
+    margin-bottom: 8.55%;
+    width: 87%;
+    height: 10.1%;
 }
 div.request-window p.request-text,
 div.request-content div.textarea-title{
@@ -610,8 +632,8 @@ div.request-content div.textarea-title{
     text-align: left;
     color:white;
 }
-div.request-content div.textarea-title{
-    width: 142px;
+div.request-content div.textarea-title {
+    width: 13.8%;
     height: 89px;
     background: #f7de8f;
     text-transform: uppercase;
@@ -619,30 +641,43 @@ div.request-content div.textarea-title{
     text-align: left;
     padding-top: 15px;
     padding-left: 22px;
-    float:left;
-    margin-left:0;
+    float: left;
+    margin-left: 0;
 }
-div.request-content div.request-item{
-    height:130px;
-    margin-bottom:54px;
+div.request-content div.request-item {
+    height: 11.95%;
+    margin-bottom: 7.968%;
 }
-div.request-content textarea{
-    border:2px solid white;
+div.request-content textarea {
+    border: 2px solid white;
     font-family: "Akrobat Regular";
-    background:transparent;
-    color:white;
-    float:right;
+    background: transparent;
+    color: white;
+    float: right;
     font-size: 20px;
     height: 60px;
-    width: 826px;
-    margin-right: 0;
+    width: 79.8%;
     padding: 20px;
+    vertical-align: bottom;
 }
-div.request-content div.last{
-    margin-bottom:60px;
+div.request-content div.last {
+    margin-bottom: 7.22%;
 }
-div.request-content  button{
-    width: 307px;
+ div.request-content input[type="text"],
+  div.request-content input[type="email"] {
+    font-family: 'Akrobat Regular';
+    font-size: 22px;
+    width: 19%;
+    height: 59px;
+    margin-right: 9px;
+    background: transparent;
+    border: 2px solid white;
+    line-height: 1.2;
+    text-align: left;
+    color: white;
+}
+div.request-content button {
+    width: 28.67%;
     height: 65px;
     top: 1px;
     padding: 3px;
@@ -659,6 +694,120 @@ div.request-content  button{
     box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
     z-index: 80;
 }
+
+@media screen and (max-width:1700px){
+    div.request-window p.request-text {
+        font-size: 27px;
+    }
+        div.request-content textarea {
+            float: left;
+        }
+        div.request-window .request-content {
+            padding-left: 12px;
+        }
+        div.request-window{
+            height:1000px;
+        }
+        div.request-content .confirm-politic {
+            left: 54px;
+        }
+}
+@media screen and (max-width:1585px){
+    div.request-window .request-content {
+        padding-left: 108px;
+    }
+    div.request-window .request-top-left {
+        width: 59%;
+        height: 36.2%;
+    }
+    div.request-window img.request-bottom-right {
+        width: 54.4%;
+        height: 40.83%;
+    }
+    div.request-window p.request-text {
+        font-size: 23px;
+    }
+    div.request-window{
+            height: 917px;
+    }
+    content div.textarea-title {
+        width: 12.2%;
+    }
+    div.request-content textarea {
+        width: 63.8%;
+    }
+     div.request-content input[type="text"], 
+     div.request-content input[type="email"] {
+        width: 16%;
+        height: 48px;
+     }
+     div.request-content button {
+        width: 189px;
+        height: 49px;
+    }
+    div.request-content .btn p {
+        font-size: 20px;
+    }
+     div.request-content .confirm-politic {
+        left: 74px;
+        bottom: 8px;
+    }
+    div.request-content .btn p {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1377px){
+    div.request-window p.request-text {
+        font-size: 21px;
+        margin-bottom: 43px;
+    }
+    div.request-content div.textarea-title {
+        width: 13.8%;
+        height: 80px;
+        font-size: 27px;
+    }
+    div.request-content textarea {
+        width: 62.8%;
+        height: 51px;
+    }
+    div.request-content div.request-item {
+        margin-bottom: 5.968%;
+    }
+    div.request-content input[type="text"], div.request-content input[type="email"] {
+        width: 158px;
+        height: 43px;
+    }
+    div.request-content .confirm-politic p {
+        font-size: 16px;
+    }
+    div.request-content input[type="text"], div.request-content input[type="email"] {
+        width: 158px;
+        height: 43px;
+    }
+    div.request-content .confirm-politic {
+        left: -20px;
+        bottom: 12px;
+    }
+    div.request-content div.request-item:last-child{
+        margin-bottom: 4.9%;
+    }
+    div.request-content button {
+        width: 151px;
+        height: 45px;
+    }
+    div.request-content .btn p {
+        font-size: 15px;
+    }
+    div.request-content input[type="text"], div.request-content input[type="email"] {
+        width: 149px;
+        height: 36px;
+        font-size: 17px;
+    }
+}
+
+
+
+
 div.hide-request{
     display:none;
 }
@@ -1471,8 +1620,8 @@ div.popup-thanks{
     position:absolute;
     background:url("../images/bg_page.jpg");
     z-index:110;
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     box-shadow: 0 0 50px rgb(255, 255, 255);
 }
 div.popup-thanks .close-popup{
@@ -1496,6 +1645,8 @@ div.popup-thanks p{
     text-align:center;
     font-family:'Akrobat SemiBold';
     width:100%;
+    position:relative;
+    z-index:111;
 }
 div.popup-thanks p.thank{
 font-size:24px;
