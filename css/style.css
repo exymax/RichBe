@@ -41,7 +41,6 @@ div.wrapper div.guarant-banner-wrap{
 div.wrapper .wrap-head{
     max-width: 1338px;
     padding-left: 193px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -84,7 +83,7 @@ div.wrapper .bottom-right-angle{
     position: absolute;
     bottom:0;
     right:0;
-    z-index: 2;
+
 }
 div.wrapper .guarant-content span{
     display: block;
@@ -116,7 +115,7 @@ header div.logo::after
     height:0px;
     background: #b8b8b8;
     border:1px solid #b8b8b8;
-    margin-top:16px;
+    margin-top:20px;
 }
 header .inner-wrap .head-title{
     font-family:'Akrobat ExtraBold';
@@ -196,7 +195,7 @@ section.our-school-represent h1{
     margin-top: 85px;
 }
 section.our-school-represent h3{
-    width:835px;
+    width:839px;
     font-size: 24px;
     text-shadow: 0px 7px 11.9px rgba(0, 0, 0, 0.69);
     text-align: center;
@@ -243,6 +242,8 @@ section.about-school .inner-wrap{
     align-items: center;
     margin-top: 22px;
     padding-right: 40px;
+    z-index: 8;
+    position: relative;
 }
 div.purposes span{
     font-family: "Akrobat ExtraBold"; 
@@ -356,21 +357,32 @@ opacity: 0.2;
 aside.banners ul>li:nth-child(2){
     opacity: 0.5;
 }
-aside.banners >div>div{
-    animation: animatebanner 5s ease-in-out infinite alternate;
-    /*animation: animation-name animation-duration animation-timing-function 
-    animation-delay animation-iteration-count animation-direction;*/
-}
 aside.banners >div>div:hover{
-    transition: .5s;
+    /*transition: .5s;*/
     box-shadow: 0 0 50px rgb(255, 255, 255);
+    animation: none;
 }
-@keyframes animatebanner{
+aside.banners >div>div{
+    animation: animateBanner 5s ease-in-out infinite;
+}
+@keyframes animateBanner {
+    0% {
+    }
+    80% {
+        box-shadow: 0px 7px 11.9px 2.1px rgba(0, 0, 0, 0.69);
+    }
+    90% {
+        box-shadow: 0 0 50px white;
+    }
+    100% {
+        box-shadow: 0px 7px 11.9px 2.1px rgba(0, 0, 0, 0.69);
+    }
+}
+/*@keyframes animatebanner{
     to {
         box-shadow: 0 0 50px rgb(255, 255, 255);
     }
-  }
-  
+  }*/
 section.your-result .inner-wrap{
     max-width: 1580px;
     width: 100%;
@@ -430,6 +442,7 @@ div.request-content input[type="email"]
     border:2px solid white;
   line-height: 1.2;
   text-align: left;
+  color:white;
 }
 section.request input:last-child,
 div.request-content input:last-child
@@ -634,7 +647,7 @@ div.request-content  button{
     top: 1px;
     padding: 3px;
 }
-div.request-window .close-popup{
+.close-popup{
     width: 33px;
     height: 33px;
     position: absolute;
@@ -688,11 +701,18 @@ div.hide-request{
             width:auto;
             height:808px;
         }  
+        aside.banners {
+            height: 521px;
+            width: 270px;
+        }
         section.our-school-represent  h1{
     font-size: 58px
        }
        section.our-school-represent h3{
-    font-size:20px;
+    font-size:21px;
+       }
+       section.our-school-represent h3{
+        width:770px;
        }
        section.about-school .inner-wrap{
            padding-right:0;
@@ -861,9 +881,6 @@ div.hide-request{
             width: 82px;
             margin-top: 3px;
         }
-        aside.banners {
-            right: 53px;
-        }
         aside.banners .want-banner, aside.banners .selection-banner {
             width: 241px;
         }
@@ -872,9 +889,6 @@ div.hide-request{
         }
     }
     @media screen and (max-width:1439px){
-        aside.banners{
-            right: 80px;
-        }
         img.rich-man{
             width:auto;
             height:816px;
@@ -884,9 +898,7 @@ div.hide-request{
             }
     }
     @media screen and (max-width:1415px){
-        aside.banners{
-            right: 100px;
-        }
+
     }
     @media screen and (max-width:1397px){
         aside .want-banner{
@@ -916,9 +928,6 @@ div.hide-request{
             width: 77px;
             margin-bottom: -22px;
         }
-        aside.banners {
-            right: 100px;
-        }
         aside.banners .want-banner, aside.banners .selection-banner {
             width: 221px;
         }
@@ -939,3 +948,560 @@ div.hide-request{
             width: 221px;
         }
     }
+    @media screen and (max-width:1375px){
+        img.top-left-angle{
+            width:715px;
+            height:auto;
+            }
+            div.bottom-right-angle img{
+                width: 821px;
+                height: 448px;
+            }
+            footer .inner-footer{
+                max-width: 1321px;
+            }
+            header .inner-wrap{
+                top: 67px;
+            }
+            section.our-school-represent h1 {
+                font-size: 53px;
+            }
+            section.our-school-represent h3 {
+                font-size: 19px;
+            }
+            section.our-school-represent h3 {
+                width: 688px;
+            }
+            img.rich-man{
+                height:719px;
+            }
+            section.your-result h3{
+                font-size: 33px;
+                margin-left: 332px;
+                padding-top: 7px;
+            }
+            section.your-result .inner-wrap {
+                height: 96px;
+                background-size: 1127px;
+            }
+            footer a {
+                font-size: 23px;
+            }
+            footer .inner-footer {
+                max-width: 1305px;
+                padding-top: 38px;
+            }
+            section.request .confirm-politic {
+                position: relative;
+                left: 20px;
+            }
+            section.request input[type="text"],
+            section.request input[type="email"], 
+            div.request-content input[type="text"], 
+            div.request-content input[type="email"]{
+                width: 195px;
+                height: 48px;
+             }
+             section.request button{
+                width: 175px;
+                height: 53px;
+             }
+             section.request button p{
+                padding: 5px;
+                font-size: 27px;
+            }
+    }
+
+    @media screen and (max-width:1320px){
+        footer .inner-footer {
+            max-width: 1266px;
+            padding-top: 38px;
+        }
+    }
+        @media screen and (max-width:1305px){
+            img.top-left-angle {
+                width: 657px;
+                height: auto;
+            }
+            .wrap-head div.guarant {
+                background-size: 265px;
+                left: 60px;
+            }
+            .wrap-head div.guarant .guarant-content {
+                padding-right: 99px;
+                margin-top: 55px;
+            }
+            .wrap-head div.guarant .guarant-content .guarant-title img {
+                width: 91px;
+            }
+            header .inner-wrap {
+                top:0;
+            }
+            section.our-school-represent h1 {
+                font-size: 50px;
+            }
+            section.our-school-represent h1 {
+                margin-top: 50px;
+            }
+            section.about-school .inner-wrap {
+                padding-left: 210px;
+            }
+         
+        }
+        @media screen and (max-width:1300px){
+            aside.banners .want-banner, aside.banners .selection-banner {
+                width: 194px;
+                height: 315px;
+            }
+            aside.banners h2 {
+                font-size: 30px;
+            }
+            aside .want-banner .banner-img img {
+                width: 130px;
+                position: relative;
+                left: 18px;
+                bottom: 5px;
+            }
+            aside .btn {
+                width: 176px;
+                height: 52px;
+            }
+            .btn p {
+                margin-top: 3px;
+                padding: 4px;
+                font-size: 29px;
+            }
+            aside .want-banner .banner-img {
+                margin-bottom: -25px;
+            }
+            aside.banners .want-banner-wrap {
+                width: 202px;
+                height: 307px;
+            }
+            aside.banners .want-banner, aside.banners .selection-banner {
+                width: 191px;
+                height: 297px;
+            }
+            aside .selection-banner h2 span {
+                font-size: 35px;
+            }
+            aside.banners .selection-banner-wrap {
+                height: 219px;
+                width: 202px;
+            }
+            aside.banners .selection-banner {
+                width: 191px;
+                height: 208px;
+            }
+        }
+        @media screen and (max-width:1270px){
+            footer a {
+                font-size: 18px;
+            }
+            footer .inner-footer {
+                max-width: 1212px;
+            }
+            img.rich-man {
+                width: auto;
+                height: 633px;
+            }
+            section.your-result h3 {
+                font-size: 26px;
+                width: 607px;
+            }
+            section.your-result .inner-wrap {
+                height: 89px;
+                background-size: 1077px;
+            }
+        }
+        @media screen and (max-width:1270px){
+            section.your-result .inner-wrap {
+                height: 81px;
+                background-size: 1015px;
+            }
+            section.request span {
+                font-size: 27px;
+            }    
+            aside.banners {
+                height: 532px;
+                width: 247px;
+            }      
+            section.about-school ul {
+                font-size: 20px;
+            }  
+            section.about-school h3 {
+                font-size: 36px;
+            }
+            footer .inner-footer {
+                max-width: 1183px;
+                padding-top: 48px;
+            }
+        }
+        @media screen and (max-width:1270px){
+            .wrap-head div.guarant {
+                background-size: 265px;
+                left: 37px;
+            }
+            header .inner-wrap .head-title {
+                font-size: 26px;
+                margin-left: 41px;
+            }
+            section.our-school-represent h1 {
+                font-size: 46px;
+            }
+            section.our-school-represent h3 {
+                margin-top: -8px;
+                width: 633px;
+                font-size: 18px;
+            }
+            .school-represent .our-school-text {
+                width: 549px;
+                font-size: 20px;
+            }
+            section.about-school .inner-wrap {
+                padding-left: 150px;
+                margin-top: 14px;
+            }
+            footer .inner-footer {
+                max-width: 1156px;
+            }
+        }
+        @media screen and (max-width:1195px){
+            section.your-result .inner-wrap {
+                height: 81px;
+                background-size: 972px;
+            }
+            section.request span {
+                font-size: 25px;
+            }
+            section.request .confirm-politic {
+                margin-top: -21px;
+            }
+            section.request .confirm-politic p{
+                font-size: 19px;
+                margin-left: -15px;
+            }
+            section.request .check-mark img{
+                margin-left: 1px;
+                margin-top: -2px;
+            }
+            section.request .check-mark{
+                top: -2px;
+                left: -43px;
+                width: 20px;
+                height: 20px;
+            }
+            section.request span {
+                margin-top: 13px;
+            }
+            div.bottom-right-angle img {
+                width: 799px;
+                height: 415px;
+            }
+            div.social-icons ul {
+                position: relative;
+                top: 457px;
+                right: 51px;
+            }
+            section.request button {
+                width: 159px;
+                height: 45px;
+            }
+            section.request button p {
+                padding: 3px;
+                font-size: 23px;
+            }
+            section.request input[type="text"],
+            section.request input[type="email"], 
+            div.request-content input[type="text"], 
+            div.request-content input[type="email"]{
+                width: 163px;
+                height: 38px;
+             }
+             section.request .inner-wrap {
+                bottom: 19px;
+                left: 40px;
+            }
+            section.request span {
+                font-size: 23px;
+            }
+        }
+            @media screen and (max-width:1150px){
+                footer .inner-footer {
+                    max-width: 1098px;
+                    padding-top: 40px;
+                }
+                section.your-result .inner-wrap {
+                    background-size: 939px;
+                }
+                img.rich-man {
+                    width: auto;
+                    height: 583px;
+                }
+                img.top-left-angle {
+                    width: 575px;
+                    height: auto;
+                }
+                .wrap-head div.guarant {
+                    background-size: 228px;
+                    left: 0px;
+                }
+                .wrap-head div.guarant .guarant-content .guarant-title img {
+                    width: 74px;
+                    margin-bottom: -8px;
+                }
+                div.guarant .guarant-content .year-number img {
+                    width: 46px;
+                }
+                span.year-number::before, span.year-number::after {
+                    width: 20px;
+                    margin-top: 10px;
+                }
+                span.year-number {
+                    width: 95px;
+                    margin-bottom: -6px;
+                }
+                span.of-year {
+                    width: 93px;
+                }
+                span.of-year img{
+                    width: 47px;
+                }
+                .wrap-head div.guarant .guarant-content {
+                    padding-right: 134px;
+                    margin-top: 44px;
+                }
+                section.your-result .inner-wrap {
+                    background-size: 918px;
+                }
+                aside.banners {
+                    width: 219px;
+                }
+            }
+            @media screen and (max-width:1090px){
+                footer .inner-footer {
+                    max-width: 1040px;
+                }
+                section.your-result .inner-wrap {
+                    background-size: 863px;
+                    height: 72px;
+                }
+                section.your-result h3 {
+                    font-size: 24px;
+                    width: 552px;
+                    margin-left: 265px;
+                }
+                section.request span {
+                    font-size: 21px;
+                }
+                section.request .confirm-politic p {
+                    font-size: 16px;
+                    margin-top: 31px;
+                }
+                section.about-school .inner-wrap {
+                    padding-left: 108px;
+                }
+                section.about-school ul {
+                    font-size: 17px;
+                }
+                section.about-school h3 {
+                    width: 187px;
+                    font-size: 28px;
+                }
+                section.our-school-represent h1 {
+                    font-size: 44px;
+                }
+                section.our-school-represent h3 {
+                    margin-top: 0px;
+                    width: 581px;
+                    font-size: 16px;
+                }
+                section.our-school-represent .our-school-text {
+                    width: 542px;
+                    font-size: 20px;
+                }
+                header .inner-wrap .head-title {
+                    font-size: 24px;
+                    margin-left: 52px;
+                }
+            }
+            @media screen and (max-width:1060px){
+                section.your-result .inner-wrap {
+                    background-size: 830px;
+                }
+                section.request span {
+                    font-size: 19px;
+                }
+                ul.socials li img {
+                    width: 38px;
+                    height: 38px;
+                }
+                ul.socials li:nth-child(1){
+                    bottom: 209px;
+                    left: 526px;
+                  }
+                  ul.socials li:nth-child(2){
+                    bottom: 232px;
+                    left: 566px;
+                  }
+                  ul.socials li:nth-child(3){
+                    bottom: 255px;
+                    left: 606px;
+                  }
+                  ul.socials li:nth-child(4){
+                    bottom: 279px;
+                    left: 648px;
+                  }
+                  ul.socials li:nth-child(5){
+                    bottom: 302px;
+                    left: 691px;
+                  }
+                  ul.socials li:nth-child(6){
+                    bottom: 325px;
+                    left: 734px;
+                  }
+            }
+            @media screen and (max-width:1043px){
+                section.about-school .purposes h3 {
+                    width: 161px;
+                }
+                section.about-school ul {
+                    font-size: 15px;
+                }
+                section.your-result .inner-wrap {
+                    background-size: 809px;
+                }
+                section.your-result h3 {
+                    font-size: 22px;
+                    width: 508px;
+                    margin-left: 238px;
+                }
+                section.request span {
+                    font-size: 17px;
+                }
+                section.our-school-represent h1 {
+                    font-size: 40px;
+                }
+                section.our-school-represent h3 {
+                    width: 504px;
+                    font-size: 14px;
+                }
+                section.our-school-represent .our-school-text {
+                    width: 461px;
+                    font-size: 17px;
+                    margin-top: 45px;
+                    margin-bottom: 25px;
+                }
+                section.about-school .purposes h3 {
+                    width: 143px;
+                    font-size: 22px;
+                }
+                section.about-school h3 {
+                    font-size: 25px;
+                }
+                footer .inner-footer {
+                    max-width: 998px;
+                }
+            }
+            @media screen and (max-width:1010px){
+                footer .inner-footer {
+                    max-width: 982px;
+                    padding-top: 46px;
+                }
+                section.your-result .inner-wrap {
+                    background-size: 783px;
+                }
+                section.about-school .inner-wrap {
+                    padding-left: 74px;
+                }
+                img.rich-man {
+                    width: auto;
+                    height: 527px;
+                }
+                section.request .check-mark {
+                    top: 0px;
+                    left: -38px;
+                    width: 15px;
+                    height: 15px;
+                }
+                /*section.request .check-mark img{
+                    width: 16px;
+                    height: 16px;
+                }*/
+                header .inner-wrap {
+                    top: 32px;
+                }
+            }
+            @media screen and (max-width:990px){
+                section.your-result .inner-wrap {
+                    background-size: 751px;
+                    height: 60px;
+                }
+                footer .inner-footer {
+                    max-width: 943px;
+                }
+                section.about-school .inner-wrap {
+                    padding-left: 31px;
+                }
+                header .inner-wrap .head-title {
+                    font-size: 21px;
+                    margin-left: 60px;
+                }
+                span.of-year img {
+                    width: 43px;
+                }
+                span.of-year::before {
+                    margin-left: -2px;
+                }
+            }
+div.dark-bg-popup{
+    width:100%;
+height:100%;
+position: absolute;
+top:0;
+left:0;
+background-color: rgba(0,0,0,0.7);
+z-index: 105;
+}
+div.popup-thanks{
+    width: 20.5%;
+    height: 15.2%;
+    top: 21%;
+    left: 39.75%;
+    position:absolute;
+    background:url("../images/bg_page.jpg");
+    z-index:110;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+div.popup-thanks .close-popup{
+z-index: 95;
+}
+div.popup-thanks img.popup-top-left,
+div.popup-thanks img.popup-bottom-right
+{
+    position:absolute;
+    width:120px;
+}
+div.popup-thanks img.popup-top-left{
+top:0;
+left:0;
+}
+div.popup-thanks img.popup-bottom-right{
+    bottom:0;
+    right:0;
+}
+div.popup-thanks p{
+    text-align:center;
+    font-family:'Akrobat SemiBold';
+    width:100%;
+}
+div.popup-thanks p.thank{
+font-size:24px;
+color:white;
+}
+div.popup-thanks p.soon{
+    font-size:20px;
+color:#fcde7f;
+}
