@@ -19,12 +19,15 @@ body{
     padding:0;
 }
 div.wrapper{
+    margin:0;
+    padding:0;
     padding-top:107px;
     width:100%;
+    height:100%;
+    background-size:cover;
     background:url("../images/bg_page.jpg");
     z-index: 0;
     position:relative;
-    padding-bottom: 15px;
 }
 .upper-case{
     text-transform: uppercase;
@@ -48,14 +51,11 @@ div.wrapper .wrap-head{
 }
 aside.banners{
     position: relative;
-    /*top:0;
-    right:5px;*/
     width:300px;
     height:710px;
 }
 div.wrapper .guarant{
     position: relative;
-    /*left: 30px;*/
     top: 18px;
     width:365px;
     height:260px;
@@ -477,31 +477,30 @@ div.request-content p.white-word a
 {
 color:white;
 }
-section.request .confirm-politic input,
-div.request-content .confirm-politic input
-{
+
+input[name="politic-check"] {
     display:none;
 }
-section.request .check-mark,
-div.request-content .check-mark{
+.check-mark {
+    display: block;
+    cursor: pointer;
     position:absolute;
     top: -5px;
     left: -37px;
- width:26px;
- height:26px;
- border:2px solid white;
-border-radius: 50%;
+    width:26px;
+    height:26px;
+    border:2px solid white;
+    border-radius: 50%;
 }
-section.request .check-mark img,
-div.request-content .check-mark img
-{
+.check-mark img {
     margin-left: 3px;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
-/*section.request .check-mark img:checked{
+input[type="checkbox"]:checked + img {
     visibility: visible;
-}*/
-footer{
+}
+
+footer {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -527,6 +526,12 @@ footer{
 
   div.social-icons ul{
       list-style: none;
+  }
+  div.social-icons ul .whatsapp{
+      width:52px; 
+      height:52px;
+      border:1.5px solid black;
+      border-radius:50%;
   }
   ul.socials li{
     position:absolute;
@@ -580,15 +585,15 @@ z-index: 45;
     top:7.75%;
 }*/
 div.request-window {
-    position: absolute;
+    position: fixed;
     width: 67.5%;
     max-width: 1297px;
-    height: 86.9%;
+    height: 92.9%;
     background: url(../images/bg_page.jpg);
     margin: 0 auto;
     z-index: 50;
     left: 16.25%;
-    top: 7.75%;
+    top: 6.75%;
     margin-top: -1.5%;
 }
 div.request-window .request-top-left{
@@ -635,12 +640,13 @@ div.request-content div.textarea-title{
 }
 div.request-content div.textarea-title {
     width: 13.8%;
-    height: 89px;
+    height: 90px;
     background: #f7de8f;
     text-transform: uppercase;
     color: black;
     text-align: left;
     padding-top: 15px;
+    vertical-align: middle;
     padding-left: 22px;
     float: left;
     margin-left: 0;
@@ -654,23 +660,21 @@ div.request-content textarea {
     font-family: "Akrobat Regular";
     background: transparent;
     color: white;
-    float: right;
+    float: left;
     font-size: 20px;
     height: 60px;
-    width: 79.8%;
+    width: 78.8%;
     padding: 20px;
-    vertical-align: bottom;
 }
 div.request-content div.last {
     margin-bottom: 7.22%;
 }
- div.request-content input[type="text"],
-  div.request-content input[type="email"] {
+div.request-content input[type="text"], div.request-content input[type="email"] {
     font-family: 'Akrobat Regular';
     font-size: 22px;
-    width: 19%;
+    width: 202px;
     height: 59px;
-    margin-right: 9px;
+    margin-right: 10px;
     background: transparent;
     border: 2px solid white;
     line-height: 1.2;
@@ -683,7 +687,7 @@ div.request-content button {
     top: 1px;
     padding: 3px;
 }
-.close-popup{
+/*.close-popup{
     width: 33px;
     height: 33px;
     position: absolute;
@@ -694,6 +698,33 @@ div.request-content button {
     -webkit-box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.2);
     z-index: 80;
+}*/
+
+.close-popup {
+    position: absolute;
+    z-index: 200;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    right: -22px;
+    border-radius: 50%;
+    background-color: #ca0001;
+    padding: 17px;
+    cursor: pointer;
+}
+.close-popup:before, .close-popup:after {
+    position: absolute;
+    left: 50%;
+    content: ' ';
+    height: 30px;
+    width: 3px;
+    background-color: #333;
+}
+.close-popup:before {
+    transform: rotate(45deg);
+}
+.close-popup:after {
+    transform: rotate(-45deg);
 }
 
 @media screen and (max-width:1700px){
@@ -708,9 +739,25 @@ div.request-content button {
         }
         div.request-window{
             height:1000px;
+            width: 66.5%;
         }
         div.request-content .confirm-politic {
             left: 54px;
+        }
+        div.request-content .confirm-politic p {
+            font-size: 16px;
+        }
+        div.request-window {
+            height: 929px;
+        }
+        div.request-window p.request-text {
+            margin-bottom: 4.55%;
+        }
+        div.request-content div.last {
+            margin-bottom: 8.22%;
+        }
+        div.request-content div.request-item {
+            margin-bottom: 4.968%;
         }
 }
 @media screen and (max-width:1585px){
@@ -743,7 +790,7 @@ div.request-content button {
         height: 48px;
      }
      div.request-content button {
-        width: 189px;
+        width: 211px;
         height: 49px;
     }
     div.request-content .btn p {
@@ -756,58 +803,36 @@ div.request-content button {
     div.request-content .btn p {
         font-size: 20px;
     }
-}
-@media screen and (max-width:1377px){
-    div.request-window{
-        max-height: 730px;
-    }
-    div.request-window p.request-text {
-        font-size: 21px;
-        margin-bottom: 43px;
-    }
-    div.request-content div.textarea-title {
-        width: 13.8%;
-        height: 80px;
-        font-size: 27px;
-    }
-    div.request-content textarea {
-        width: 62.8%;
-        height: 51px;
-    }
-    div.request-content div.request-item {
-        margin-bottom: 5.968%;
-    }
-    div.request-content input[type="text"], div.request-content input[type="email"] {
-        width: 158px;
-        height: 43px;
-    }
     div.request-content .confirm-politic p {
-        font-size: 16px;
-    }
-    div.request-content input[type="text"], div.request-content input[type="email"] {
-        width: 158px;
-        height: 43px;
-    }
-    div.request-content .confirm-politic {
-        left: -20px;
-        bottom: 12px;
-    }
-    div.request-content div.request-item:last-child{
-        margin-bottom: 4.9%;
-    }
-    div.request-content button {
-        width: 151px;
-        height: 45px;
-    }
-    div.request-content .btn p {
         font-size: 15px;
     }
-    div.request-content input[type="text"], div.request-content input[type="email"] {
-        width: 149px;
-        height: 36px;
+    div.request-content textarea {
         font-size: 17px;
     }
+    div.request-window {
+        height: 695px;
+    }
+    div.request-window p.request-text {
+        font-size: 20px;
+    }
+    div.request-content div.textarea-title {
+        font-size: 26px;
+    }
+    div.request-content textarea {
+        height: 48px;
+    }
+    div.request-content div.textarea-title {
+        width: 11.8%;
+        height: 77px;
+    }
+    div.request-window .request-content {
+        padding-top: 4.5%;
+    }
+    div.request-content div.request-item {
+        margin-bottom: 3.968%;
+    }
 }
+
 
 
 
@@ -1221,7 +1246,7 @@ div.hide-request{
             }
             .btn p {
                 margin-top: 3px;
-                padding: 4px;
+                padding: 6px;
                 font-size: 29px;
             }
             aside .want-banner .banner-img {
@@ -1270,7 +1295,7 @@ div.hide-request{
                 background-size: 1077px;
             }
         }
-        @media screen and (max-width:1270px){
+        @media screen and (max-width:1250px){
             section.your-result .inner-wrap {
                 height: 81px;
                 background-size: 1015px;
@@ -1293,7 +1318,7 @@ div.hide-request{
                 padding-top: 48px;
             }
         }
-        @media screen and (max-width:1270px){
+        @media screen and (max-width:1215px){
             .wrap-head div.guarant {
                 background-size: 265px;
                 left: 37px;
@@ -1491,10 +1516,18 @@ div.hide-request{
                 section.request span {
                     font-size: 19px;
                 }
-                ul.socials li img {
+                ul.socials li img ,
+                ul.socials div.whatsapp{
                     width: 38px;
                     height: 38px;
                 }
+                
+ul.socials div.whatsapp img{
+    width: 45px;
+    height: 45px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
                 ul.socials li:nth-child(1){
                     bottom: 209px;
                     left: 526px;
@@ -1613,6 +1646,305 @@ div.hide-request{
                     margin-left: -2px;
                 }
             }
+
+            @media screen and (max-width:1377px){
+                div.request-window p.request-text {
+                    font-size: 21px;
+                    margin-bottom: 43px;
+                }
+                div.request-content div.request-item {
+                    margin-bottom: 5.968%;
+                }
+                div.request-content .confirm-politic p {
+                    font-size: 16px;
+                }
+                div.request-content .confirm-politic {
+                    left: 2px;
+                    bottom: 9px;
+                }
+                div.request-content div.request-item:last-child{
+                    margin-bottom: 4.9%;
+                }
+                div.request-content button {
+                    width: 151px;
+                    height: 45px;
+                }
+                div.request-content .btn p {
+                    font-size: 15px;
+                }
+                div.request-window .request-content {
+                    padding-left: 68px;
+                }
+                div.request-content input[type="text"], 
+                div.request-content input[type="email"] {
+                    width: 152px;
+                    height: 33px;
+                    font-size: 16px;
+                }
+                div.request-window {
+                    height: 695px;
+                }
+                div.request-window p.request-text {
+                    font-size: 20px;
+                }
+                div.request-content div.textarea-title {
+                    font-size: 26px;
+                }
+                div.request-content textarea {
+                    height: 48px;
+                }
+                div.request-content div.textarea-title {
+                    width: 11.8%;
+                    height: 77px;
+                }
+                div.request-window .request-content {
+                    padding-top: 4.5%;
+                }
+                div.request-content div.request-item {
+                    margin-bottom: 3.968%;
+                }
+            }
+
+@media screen and (max-width:1350px){
+    div.request-window p.request-text {
+        font-size: 18px;
+        margin-bottom: 31px;
+    }
+    div.request-content div.textarea-title {
+        width: 13.8%;
+        height: 70px;
+        font-size: 23px;
+    }
+    div.request-content textarea {
+        width: 62.8%;
+        height: 41px;
+    }
+    div.request-window .request-content {
+        padding-left: 99px;
+    }
+    div.request-window {
+        height: 689px;
+    }
+    div.request-content .confirm-politic p {
+        font-size: 15px;
+    }
+    div.request-content textarea {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:1220px){
+    div.request-window .request-content {
+        padding-left: 81px;
+    }
+    div.request-content button {
+        width: 141px;
+        height: 41px;
+    }
+    div.request-content .btn p {
+        font-size: 14px;
+    }
+    div.request-content input[type="email"] {
+        width: 140px;
+        height: 33px;
+        font-size: 15px;
+    }
+    div.request-content .confirm-politic p {
+        font-size: 14px;
+    }
+    div.request-content .check-mark img {
+        margin-left: 2px;
+        width: 13px;
+        height: 13px;
+        margin-top: 2px;
+    }
+    div.request-content .check-mark {
+        top: -3px;
+        left: -24px;
+        width: 17px;
+        height: 17px;
+    }
+}
+@media screen and (max-width:1155px){
+    div.request-content button {
+        width: 115px;
+        height: 38px;
+    }
+    div.request-content .btn p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:1116px){
+    div.request-window {
+        height: 650px;
+    }
+    div.request-content input[type="text"], div.request-content input[type="email"] {
+        width: 127px;
+        height: 29px;
+        font-size: 14px;
+    }
+    div.request-content input[type="email"] {
+        width: 126px;
+        height: 29px;
+        font-size: 14px;
+    }
+    div.request-content .btn p {
+            font-size: 11px;
+    }
+    div.request-content button {
+        width: 115px;
+        height: 38px;
+    }
+    div.request-content .confirm-politic p {
+        font-size: 13px;
+    }
+    div.request-content div.textarea-title {
+        font-size: 21px;
+    }
+}
+@media screen and (max-width:1080px){
+    div.request-window .request-content {
+        padding-left: 63px;
+    }
+}
+@media screen and (max-width:1010px){
+    div.request-content .confirm-politic p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:1000px){
+    div.request-content textarea {
+        width: 66.8%;
+    }
+    div.request-window .request-content {
+        padding-left: 48px;
+    }
+}
+@media screen and (max-width:1921px){
+    div.wrapper .rich-man {
+        height: 957px;
+    }
+    div.wrapper .top-left-angle{
+        height: 532px;
+    }
+    div.wrapper .guarant{
+        left:-41px;
+    }
+    header .inner-wrap {
+        top: 2px;
+    }
+    section.our-school-represent h1 {
+        font-size: 59px;
+        margin-top: 53px;
+    }
+    section.our-school-represent h3 {
+        width: 799px;
+        font-size: 22px;
+        margin-top: -19px;
+    }
+    section.our-school-represent p.our-school-text {
+        margin-top: 50px;
+        width: 571px;
+    }
+    section.about-school h3 {
+        font-size: 36px;
+    }
+    section.our-school-represent .our-school-text, 
+    section.about-school ul {
+        font-size: 21px;
+    }
+    section.your-result h3 {
+        font-size: 33px;
+        padding-top: 14px;
+    }
+    section.your-result .inner-wrap {
+        margin-top: 25px;
+        height: 108px;
+    }
+    section.about-school .inner-wrap {
+        margin-top: 15px;
+    }
+    div.wrapper .bottom-right-angle .bottom-right{
+        height: 534px;
+        width: 1009px;
+    }
+    section.request input[type="text"],
+     section.request input[type="email"]{
+        height: 50px;
+     }
+     section.request button p{
+        padding: 6px;
+    }
+    section.request button {
+        height: 60px;
+    }
+    section.request span {
+        font-size: 29px;
+        margin-top: 14px;
+    }
+    footer a {
+           height: 70px;
+    }
+    section.request div.make-request-description{
+        padding-bottom: 1px;
+    }
+    aside.banners h2 {
+        font-size: 47px;
+    }
+    aside div.phrases-banner {
+        font-size: 19px;
+    }
+    div.banner-img img{
+        width: 154px;
+        height: 143px;
+    }
+    .btn p {
+        padding: 6px
+    }
+    aside .btn {
+        width: 246px;
+        height: 68px;
+    }
+    aside .want-banner .banner-img {
+        margin-top: 15px;
+    }
+    aside.banners .want-banner-wrap {
+        width: 275px;
+        height: 412px;
+    }
+    aside.banners .want-banner,
+     aside.banners .selection-banner {
+        width: 264px;
+     }
+     aside .want-banner {
+        height: 400px;
+     }
+     aside .selection-banner h2 span {
+        font-size: 42px;
+    }
+    aside.banners h2 {
+        font-size: 41px;
+    }
+    aside.banners ul {
+        margin-top: -26px;
+        margin-bottom: 13px;
+    }
+    aside.banners .selection-banner-wrap {
+        height: 278px;
+        width: 272px;
+    }
+    aside .selection-banner {
+        height: 264px
+    }
+    div.social-icons ul.socials {
+        position: relative;
+        top: 567px;
+    }
+}
+@media screen and (max-width: 1921px){
+    div.wrapper .guarant {
+        left: -13px;
+    }
+}
 div.dark-bg-popup{
     width:100%;
 height:100%;
@@ -1624,10 +1956,10 @@ z-index: 105;
 }
 div.popup-thanks{
     width: 20.5%;
-    height: 15.2%;
+    height: 16.2%;
     top: 21%;
     left: 39.75%;
-    position:absolute;
+    position:fixed;
     background:url("../images/bg_page.jpg");
     z-index:110;
     border-top-right-radius: 30px;
@@ -1665,4 +1997,9 @@ color:white;
 div.popup-thanks p.soon{
     font-size:20px;
 color:#fcde7f;
+}
+
+button.disabled{
+    opacity:0.5;
+    cursor: default;
 }

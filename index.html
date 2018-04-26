@@ -85,16 +85,20 @@
 </section>
 <section class="request">
         <div class="inner-wrap">
-                <form>
-                        <input type="text" name="fio" id="fio" placeholder="ФИО:">
-                        <input type="text" name="phone" id="pnone" placeholder="Тел:">
-                        <input type="email" name="mail" id="mail" placeholder="E-mail:">
-                        <button name="submit" id="submit" class="submit gold-word btn upper-case"><p>отправить</p></button>
+                <form oninput="validate();">
+                        <input type="text" name="fio" id="fio-main" placeholder="ФИО:" required>
+                        <input type="text" name="phone" id="pnone-main" placeholder="Тел:" class="phone" required>
+                        <input type="text" name="mail" id="mail-main" placeholder="E-mail:" class="email" required>
+                        <button onclick="submitHandler();" name="submit" id="submit" class="disabled subm gold-word btn upper-case" disabled><p>отправить</p></button>
                         <div class="make-request-description">
                             <span class="gold-word upper-case">оставь заявку - получи приглашение в богатую жизнь!</span>
                             <div class="confirm-politic">
-                                <input type="checkbox" name="politic-check" id="politic-check" checked>
-                                <div class="check-mark"><img src="./images/check1.png"></div>
+                                <!--<div class="politics-checkbox">-->
+                                    <label class="check-mark">
+                                        <input type="checkbox" name="politic-check" />
+                                        <img src="./images/check1.png">
+                                    </label>
+                                <!--</div>-->
                                 <p class="white-word"> Нажимая на кнопку ОТПРАВИТЬ, 
                                         вы соглашаетесь с <a href="./docs/conf_politic.docx">политикой конфиденциальности</a></p>
                                </div>
@@ -113,20 +117,20 @@
     <div class="social-icons">
         <ul class="socials">
             <li><a href="#" target="_blank"><img src="./images/skype.png"></a></li>
-            <li><a href="#" target="_blank"><img src="./images/telegram.png"></a></li>
-            <li><a href="#" target="_blank"><img src="./images/youtube.png"></a></li>
+            <li><a href="#" target="_blank"><div class="whatsapp"><img src="./images/whatsapp.png"></div></a></li>
+            <li><a href="#" target="_blank"> <img src="./images/youtube.png"></a></li>
             <li><a href="#" target="_blank"><img src="./images/vk.png"></a></li>
             <li><a href="#" target="_blank"><img src="./images/facebook.png"></a></li>
             <li><a href="#" target="_blank"><img src="./images/instagram.png"></a></li>
         </ul>
     </div>
-    <img src="./images/redAngle_bottom_right.png">
+    <img src="./images/redAngle_bottom_right.png" class="bottom-right">
 </div>
 <div class="dark-bg hide-request"></div>
     <div class="request-window hide-request">
         <img src="./images/request-top-left.png" class="request-top-left">
         <img src="./images/new-angle-red-white.png" class="request-bottom-right">
-        <div class="close-popup"><span>&nbsp;</span></div>
+        <div class="close-popup"></div>
         <div class="request-content">
                 <p class="request-text">
                         Добрый день!<br>Напишите, чего Вы хотите, а мы сделаем
@@ -135,24 +139,26 @@
                 </p>
                 <div class="request-item">
                     <div class="textarea-title goal">моя <br>цель:</div>
-                    <textarea name="" id="" cols="30" rows="7">Например: быстро срубить денег, словить удачу за хвост...</textarea>
+                    <textarea name="purpuse" id="purpuse" rows="3" maxlength="250" required>Например: быстро срубить денег, словить удачу за хвост...</textarea>
                 </div>
                 <div class="request-item">
                         <div class="textarea-title skills">мой <br>навык:</div>
-                        <textarea name="" id="" cols="30" rows="7">Например: владею навыками продаж...</textarea>
+                        <textarea name="skills" id="skills" rows="3" maxlength="250">Например: владею навыками продаж...</textarea>
                     </div>
                     <div class="request-item last">
                             <div class="textarea-title wishes">моё <br>желание:</div>
-                            <textarea name="" id="" cols="30" rows="7">Например: больше путешествовать, купить свой дом...</textarea>
+                            <textarea name="desire" id="desire" rows="3" maxlength="250">Например: больше путешествовать, купить свой дом...</textarea>
                         </div>
-                        <form>
-                                <input type="text" name="fio" id="fio" placeholder="ФИО:" required>
-                                <input type="text" name="phone" id="pnone" placeholder="Тел:" required>
-                                <input type="email" name="mail" id="mail" placeholder="E-mail:" required>
-                                <button name="execute" id="execute" class="submit gold-word btn upper-case"><p>исполнить быстро</p></button>
+                        <form oninput="validate();">
+                                <input type="text" name="fio" id="fio-req" placeholder="ФИО:" required>
+                                <input type="text" name="phone" id="pnone-req" placeholder="Тел:" class="phone" required>
+                                <input type="text" name="mail" id="mail-req" placeholder="E-mail:" class="email" required>
+                                <button onclick="submitHandler();" name="execute" id="execute" class="disabled exec gold-word btn upper-case"><p>исполнить быстро</p></button>
                                     <div class="confirm-politic">
-                                        <input type="checkbox" name="politic-check" id="politic-check" checked>
-                                        <div class="check-mark"><img src="./images/check1.png"></div>
+                                            <label class="check-mark">
+                                                <input type="checkbox" name="politic-check" checked/>
+                                                <img src="./images/check1.png">
+                                            </label>
                                         <p class="white-word"> Нажимая на кнопку ИСПОЛНИТЬ БЫСТРО, 
                                                 вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
                                        </div>
@@ -161,13 +167,16 @@
     </div>
     <div class="dark-bg-popup hide-request"></div>
     <div class="popup-thanks hide-request">
-            <div class="close-popup"><span>&nbsp;</span></div>
+            <div class="close-popup"></div>
             <img src="./images/request-top-left.png" class="popup-top-left">
             <img src="./images/new-angle-red-white.png" class="popup-bottom-right">
         <p class="thank">Спасибо за заявку</p> 
         <p class="soon">Мы скоро свяжемся с вами!</p>
     </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" rel="script"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/jquery.mask.js" rel="script"></script>
+<script src="./js/index.js" rel="script"></script>
 </body>
 </html>

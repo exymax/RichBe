@@ -25,15 +25,18 @@ var darkBgThanks=document.querySelector('div.dark-bg-popup');
 var closetExec=document.querySelector('div.popup-thanks .close-popup');
 var thanksWin=document.querySelector('div.popup-thanks');
 
-submitBtn.addEventListener("click", showThanks);
+submitBtn.addEventListener("click", showThanksSub);
 darkBgThanks.addEventListener("click", hideThanks);
 closetExec.addEventListener("click", hideThanks);
 execBtn.addEventListener("click", function(){
     hideRequest();
-    showThanks();
+    showThanksExec();
 });
-
-function showThanks(e){
+function showThanksExec(){
+    darkBgThanks.classList.remove('hide-request');
+    thanksWin.classList.remove('hide-request');
+}
+function showThanksSub(e){
    e.preventDefault();
     darkBgThanks.classList.remove('hide-request');
     thanksWin.classList.remove('hide-request');
