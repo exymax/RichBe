@@ -1334,7 +1334,8 @@ div.confid-popup .close-popup {
     top: -20px;
     right: -17px;
 }
-div.confid-popup .close-popup:before, .close-popup:after {
+div.confid-popup .close-popup:before, 
+div.confid-popup .close-popup:after {
     left: 46%;
     top: 23%;
     height: 25px;
@@ -1349,6 +1350,7 @@ div.confid-content {
     z-index: 55;
     overflow: scroll;
     bottom: 11px;
+    color:white;
 }
 div.dark-bg-confid{
     width:100%;
@@ -1359,7 +1361,8 @@ div.dark-bg-confid{
     background-color: rgba(0,0,0,0.7);
     z-index: 49;
     }
-    section.request .confirm-politic span{
+ .confid-style{
+     display:inline;
         text-decoration: underline;
         font-family: inherit;
         font-size: inherit;
@@ -1367,4 +1370,8 @@ div.dark-bg-confid{
         margin:0;
         padding:0;
         cursor: pointer;
+    }
+    section.request .confid-style{
+        display:inline;
+        font-size:inherit;
     }
