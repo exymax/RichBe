@@ -1851,8 +1851,8 @@ background-color: rgba(0,0,0,0.7);
 z-index: 105;
 }
 div.popup-thanks{
-    width: 20.5%;
-    height: 16.2%;
+    width: 394px;
+    height: 176px;
     top: 21%;
     left: 39.75%;
     position:fixed;
