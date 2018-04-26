@@ -1999,7 +1999,8 @@ div.popup-thanks p.soon{
 color:#fcde7f;
 }
 
-button.disabled{
+/*button.disabled{
     opacity:0.5;
     cursor: default;
-}
+    pointer-events: none;
+}*/
