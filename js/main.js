@@ -4,6 +4,23 @@ var popupWin=document.querySelector('div.request-window');
 var closet=document.querySelector('div.close-popup');
 var openRequest1=document.querySelector("aside button.want-banner-btn");
 var openRequest2=document.querySelector("aside button.select-banner-btn");
+var darkBgConf=document.querySelector('div.dark-bg-confid');
+var closetConf=document.querySelector('div.confid-popup .close-popup');
+var openConf=document.querySelector('.confirm-politic span');
+var Confid=document.querySelector('.confid-popup');
+
+darkBgConf.addEventListener("click", hideConfid);
+closetConf.addEventListener("click", hideConfid);
+openConf.addEventListener("click", showConfid);
+
+function hideConfid(){
+    darkBgConf.classList.add('hide-request');
+    Confid.classList.add('hide-request');
+    }
+    function showConfid(){
+        darkBgConf.classList.remove('hide-request');
+        Confid.classList.remove('hide-request');
+    }
 
 darkBack.addEventListener("click", hideRequest);
 closet.addEventListener("click", hideRequest);
