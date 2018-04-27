@@ -713,6 +713,9 @@ div.request-content button {
     div.wrapper .guarant {
         left: 73px;
     }
+    #page-container div.fs0 {
+        font-size: 53px;
+    }
     }
 .close-popup {
     position: absolute;
@@ -773,6 +776,9 @@ div.request-content button {
         }
         div.request-content div.request-item {
             margin-bottom: 4.968%;
+        }
+        #page-container div.fs0 {
+            font-size: 50px;
         }
 }
 @media screen and (max-width:1585px){
@@ -1261,6 +1267,9 @@ div.hide-request{
         background-size: 297px;
         left:117px;
     }
+    #page-container div.fs0 {
+        font-size: 47px;
+    }
     .wrap-head div.guarant .guarant-content{
         padding-right: 63px;
         margin-top: 66px;
@@ -1318,6 +1327,9 @@ div.hide-request{
     footer .inner-footer{
         max-width:1358px;
         }
+        #page-container div.fs0 {
+            font-size: 45px;
+        }
 }
 
 @media screen and (max-width:1375px){
@@ -1360,6 +1372,9 @@ div.hide-request{
          section.request button p{
             padding: 5px;
             font-size: 27px;
+        }
+        #page-container div.fs0 {
+            font-size: 42px;
         }
 }
 
@@ -1407,6 +1422,9 @@ div.hide-request{
     @media screen and (max-width:1270px){
         footer a {
             font-size: 18px;
+        }
+        #page-container div.fs0 {
+            font-size: 39px;
         }
         footer .inner-footer {
             max-width: 1212px;
@@ -1537,6 +1555,9 @@ div.hide-request{
         section.about-school .inner-wrap {
             padding-left: 0;
         }
+        #page-container div.fs0 {
+            font-size: 37px;
+        }
     }
 
 div.dark-bg-popup{
@@ -1554,7 +1575,7 @@ div.popup-thanks{
     top: 21%;
     left: 39.75%;
     position:fixed;
-    background:url("../images/bg_page.jpg");
+    background:white;
     z-index:110;
     box-shadow: 0 0 50px rgb(255, 255, 255);
 }
@@ -1567,14 +1588,6 @@ div.popup-thanks img.popup-bottom-right
     position:absolute;
     width:120px;
 }
-div.popup-thanks img.popup-top-left{
-top:0;
-left:0;
-}
-div.popup-thanks img.popup-bottom-right{
-    bottom:0;
-    right:0;
-}
 div.popup-thanks p{
     text-align:center;
     font-family:'Akrobat SemiBold';
@@ -1584,11 +1597,11 @@ div.popup-thanks p{
 }
 div.popup-thanks p.thank{
     font-size: 35px;
-color:white;
+color:black;
 }
 div.popup-thanks p.soon{
     font-size: 24px;
-color:#fcde7f;
+color:black;
 }
 div.popup-thanks .close-popup{
     width: 8px;
@@ -1612,7 +1625,7 @@ div.confid-popup {
     width: 48.5%;
     max-width: 1297px;
     height: 80.9%;
-    background: url(../images/bg_page.jpg);
+    background: white;
     margin: 0 auto;
     z-index: 51;
     left: 25.75%;
@@ -1624,18 +1637,6 @@ div.confid-popup img.confid-top-left,
 div.confid-popup img.confid-bottom-right
 {
     position:absolute;
-}
-div.confid-popup .confid-top-left{
-    width: 461px;
-    top:0;
-    left:0;
-    z-index: 53;
-}
-div.confid-popup .confid-bottom-right{
-    width:230px;
-    bottom:0;
-    right:0;
-    z-index: 54;
 }
 div.confid-popup .close-popup {
     position: absolute;
@@ -1652,6 +1653,7 @@ div.confid-popup .close-popup:after {
     height: 25px;
 }
 div.confid-content {
+    font-family:'Akrobat Regular';
     margin: 0 auto;
     position: relative;
     padding: 20px;
@@ -1659,7 +1661,9 @@ div.confid-content {
     width: 84%;
     height: 87%;
     z-index: 55;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
     bottom: 11px;
     color:white;
 }

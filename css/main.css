@@ -1,9 +1,4 @@
 .ff0{font-family:sans-serif;visibility:hidden;}
-@font-face{font-family:ff1;src:url(f1.woff)format("woff");}.ff1{font-family:ff1;line-height:0.942871;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff2;src:url(f2.woff)format("woff");}.ff2{font-family:ff2;line-height:0.942871;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff3;src:url(f3.woff)format("woff");}.ff3{font-family:ff3;line-height:0.943359;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff4;src:url(f4.woff)format("woff");}.ff4{font-family:ff4;line-height:0.943359;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff5;src:url(f5.woff)format("woff");}.ff5{font-family:ff5;line-height:0.674316;font-style:normal;font-weight:normal;visibility:visible;}
 .m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
 .v0{vertical-align:0.000000px;}
 .ls0{letter-spacing:0.000000px;}
@@ -37,7 +32,7 @@
 ._1{width:30.744000px;}
 ._0{width:60.768000px;}
 .fc0{color:rgb(0,0,0);}
-.fs0{font-size: 43px;}
+.fs0{font-size: 50px;}
 .fs1{font-size:48.000000px;}
 .y0{bottom:36.500000px;}
 .y3e{bottom:38.430009px;}
