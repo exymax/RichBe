@@ -995,6 +995,34 @@ div.hide-request{
         aside .selection-banner {
             height: 209px;
         }
+        div.bottom-right-angle .bottom-right {
+            height: 448px;
+            width: 816px;
+        }
+        ul.socials li:nth-child(1) {
+            bottom: 140px;
+            left: 380px;
+        }
+        ul.socials li:nth-child(2) {
+            bottom: 169px;
+            left: 429px;
+        }
+        ul.socials li:nth-child(3) {
+            bottom: 194px;
+            left: 481px;
+        }
+        ul.socials li:nth-child(4) {
+            bottom: 223px;
+            left: 530px;
+        }
+        ul.socials li:nth-child(5) {
+            bottom: 250px;
+            left: 580px;
+        }
+        ul.socials li:nth-child(6) {
+            bottom: 277px;
+            left: 629px;
+        }
       }
 @media screen and (max-width:1585px){
     .wrap-head div.guarant .guarant-content{
@@ -1023,7 +1051,7 @@ div.hide-request{
     div.wrapper .guarant {
         left: 151px;
     }
-    div.bottom-right-angle .bottom-right {
+    /*div.bottom-right-angle .bottom-right {
         height: 448px;
         width: 816px;
     }
@@ -1050,7 +1078,7 @@ div.hide-request{
     ul.socials li:nth-child(6) {
         bottom: 277px;
         left: 629px;
-    }
+    }*/
 }
      
 
@@ -1227,6 +1255,289 @@ div.hide-request{
         padding-left: 48px;
     }
 }
+
+@media screen and (max-width:1530px){
+    .wrap-head div.guarant{
+        background-size: 297px;
+        left:117px;
+    }
+    .wrap-head div.guarant .guarant-content{
+        padding-right: 63px;
+        margin-top: 66px;
+    }
+    .wrap-head div.guarant .guarant-content .guarant-title img{
+        width:105px;
+    }
+    .wrap-head div.guarant .guarant-content .year-number img{
+        width:40px;
+    }
+    span.year-number::before, span.year-number::after{
+        width:30px;
+    }
+    .wrap-head div.guarant .guarant-content .year-number img{
+        width:51px;
+    }
+    span.of-year{
+        width:100px;
+        margin-right:12px;
+    }
+    span.year-number{
+        width:121px;
+    }
+    img.rich-man{
+        width:auto;
+        height:880px;
+    }
+    img.top-left-angle{
+    width:780px;
+    height:auto;
+    }
+    div.bottom-right-angle img{
+        width: 867px;
+        height: 483px;
+    }
+    footer .inner-footer{
+        max-width:1412px;
+        }
+        section.your-result .inner-wrap {
+            height: 86px;
+            right: 106px;
+        }
+        section.your-result h3 {
+            padding-top: 27px;
+            padding-right: 6px;
+            font-size: 29px;
+        }
+}
+   
+@media screen and (max-width:1439px){
+    img.rich-man{
+        width:auto;
+        height:816px;
+    }
+    footer .inner-footer{
+        max-width:1358px;
+        }
+}
+
+@media screen and (max-width:1375px){
+    img.top-left-angle{
+        width:715px;
+        height:auto;
+        }
+        div.bottom-right-angle img{
+            width: 821px;
+            height: 448px;
+        }
+        footer .inner-footer{
+            max-width: 1321px;
+        }
+        img.rich-man{
+            height:719px;
+        }
+        footer a {
+            font-size: 23px;
+        }
+        footer .inner-footer {
+            max-width: 1305px;
+            padding-top: 38px;
+        }
+        section.request .confirm-politic {
+            position: relative;
+            left: 32px;
+        }
+        section.request input[type="text"],
+        section.request input[type="email"], 
+        div.request-content input[type="text"], 
+        div.request-content input[type="email"]{
+            width: 195px;
+            height: 48px;
+         }
+         section.request button{
+            width: 175px;
+            height: 53px;
+         }
+         section.request button p{
+            padding: 5px;
+            font-size: 27px;
+        }
+}
+
+@media screen and (max-width:1320px){
+    footer .inner-footer {
+        max-width: 1266px;
+        padding-top: 38px;
+    }
+}
+    @media screen and (max-width:1305px){
+        img.top-left-angle {
+            width: 657px;
+            height: auto;
+        }
+        .wrap-head div.guarant {
+            background-size: 265px;
+            left: 60px;
+        }
+        .wrap-head div.guarant .guarant-content {
+            padding-right: 99px;
+            margin-top: 55px;
+        }
+        .wrap-head div.guarant .guarant-content .guarant-title img {
+            width: 91px;
+        }
+        header .inner-wrap {
+            top:0;
+        }
+        section.our-school-represent h1 {
+            font-size: 50px;
+        }
+        section.our-school-represent h1 {
+            margin-top: 50px;
+        }
+        section.your-result .inner-wrap {
+            height: 81px;
+            right: 277px;
+        }
+        section.your-result h3 {
+            padding-top: 27px;
+            padding-left: 422px;
+            font-size: 28px;
+        }
+    }
+    @media screen and (max-width:1270px){
+        footer a {
+            font-size: 18px;
+        }
+        footer .inner-footer {
+            max-width: 1212px;
+        }
+        img.rich-man {
+            width: auto;
+            height: 633px;
+        }
+    }
+    @media screen and (max-width:1250px){
+        section.your-result .inner-wrap {
+            height: 77px;
+            background-size: 1185px;
+        }
+        footer .inner-footer {
+            max-width: 1183px;
+            padding-top: 48px;
+        }
+        section.your-result h3 {
+            padding-top: 27px;
+            padding-left: 422px;
+            font-size: 26px;
+        }
+        section.about-school ul {
+            font-size: 18px;
+        }
+        div.bottom-right-angle .bottom-right {
+            height: 418px;
+            width: 784px;
+        }
+    }
+    @media screen and (max-width:1215px){
+        .wrap-head div.guarant {
+            background-size: 265px;
+            left: 37px;
+        }
+        header .inner-wrap .head-title {
+            font-size: 26px;
+            margin-left: 41px;
+        }
+        section.our-school-represent h1 {
+            font-size: 46px;
+        }
+        section.our-school-represent h3 {
+            margin-top: -8px;
+            width: 633px;
+            font-size: 18px;
+        }
+        .school-represent .our-school-text {
+            width: 549px;
+            font-size: 20px;
+        }
+        section.about-school .inner-wrap {
+            padding-left: 150px;
+            margin-top: 14px;
+        }
+        footer .inner-footer {
+            max-width: 1156px;
+        }
+    }
+    @media screen and (max-width:1195px){
+        section.request span {
+            font-size: 25px;
+        }
+        section.request .confirm-politic {
+            margin-top: -21px;
+        }
+        section.request .confirm-politic p{
+            font-size: 19px;
+            margin-left: -15px;
+        }
+        section.request .check-mark img{
+            margin-left: 1px;
+            margin-top: -2px;
+        }
+        section.request .check-mark{
+            top: -2px;
+            left: -43px;
+            width: 20px;
+            height: 20px;
+        }
+        section.request span {
+            margin-top: 13px;
+        }
+        div.bottom-right-angle img {
+            width: 799px;
+            height: 415px;
+        }
+        div.social-icons ul {
+            position: relative;
+            top: 457px;
+            right: 51px;
+        }
+        section.request button {
+            width: 159px;
+            height: 45px;
+        }
+        section.request button p {
+            padding: 3px;
+            font-size: 23px;
+        }
+        section.request input[type="text"],
+        section.request input[type="email"], 
+        div.request-content input[type="text"], 
+        div.request-content input[type="email"]{
+            width: 163px;
+            height: 38px;
+         }
+         section.request .inner-wrap {
+            bottom: -12px;
+            left: 15px;
+        }
+        section.request span {
+            font-size: 23px;
+        }
+        div.bottom-right-angle .bottom-right {
+            width: 745px;
+        }
+        section.about-school h3 {
+            font-size: 32px;
+        }
+        section.about-school ul {
+            font-size: 16px;
+        }
+        aside.banners {
+            left: 50px;
+        }
+        section.about-school .inner-wrap {
+            padding-left: 0;
+        }
+    }
 
 div.dark-bg-popup{
     width:100%;
