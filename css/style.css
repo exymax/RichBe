@@ -1615,11 +1615,11 @@ div.popup-thanks .close-popup:after {
     top: 20%;
     height: 27px;
 }
-/*button.disabled{
+button.disabled{
     opacity:0.5;
     cursor: default;
-    pointer-events: none;
-}*/
+    /*pointer-events: none;*/
+}
 div.confid-popup {
     position: fixed;
     width: 48.5%;

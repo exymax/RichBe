@@ -88,15 +88,15 @@
 <section class="request">
         <div class="inner-wrap">
                 <form oninput="validate();">
-                        <input type="text" name="fio" id="fio-main" placeholder="ФИО:" required>
-                        <input type="text" name="phone" id="pnone-main" placeholder="Тел:" class="phone" required>
-                        <input type="text" name="mail" id="mail-main" onfocus="cleaner();" placeholder="E-mail:" class="email" required>
-                        <button name="submit" id="submit" class="disabled subm gold-word btn upper-case"><p>отправить</p></button>
+                    <input type="text" name="fio" id="fio-main" placeholder="ФИО:" class="main-form-input" required>
+                    <input type="text" name="phone" id="pnone-main" placeholder="Тел:" class="phone main-form-input" required>
+                    <input type="email" name="mail" id="mail-main" onfocus="cleaner();" placeholder="E-mail:" class="email main-form-input" required>
+                    <button name="send" id="submit" class="disabled subm gold-word btn upper-case"><p>отправить</p></button>
                         <div class="make-request-description">
                             <div class="confirm-politic">
                                 <!--<div class="politics-checkbox">-->
                                     <label class="check-mark">
-                                        <input type="checkbox" name="politic-check" />
+                                        <input type="checkbox" name="politic-check" class="main-checkbox" checked/>
                                         <img src="./images/check1.png">
                                     </label>
                                 <!--</div>-->
@@ -139,24 +139,24 @@
                 </p>
                 <div class="request-item">
                     <div class="textarea-title goal">моя <br>цель:</div>
-                    <textarea name="purpuse" id="purpuse" rows="3" maxlength="250" required>Например: быстро срубить денег, словить удачу за хвост...</textarea>
+                    <textarea name="purpuse" id="purpuse" class="popup-form-input" rows="3" maxlength="250" placeholder="Например: быстро срубить денег, словить удачу за хвост..." required></textarea>
                 </div>
                 <div class="request-item">
                         <div class="textarea-title skills">мой <br>навык:</div>
-                        <textarea name="skills" id="skills" rows="3" maxlength="250">Например: владею навыками продаж...</textarea>
+                        <textarea name="skills" id="skills" rows="3" maxlength="250" placeholder="Например: владею навыками продаж..."></textarea>
                     </div>
                     <div class="request-item last">
                             <div class="textarea-title wishes">моё <br>желание:</div>
-                            <textarea name="desire" id="desire" rows="3" maxlength="250">Например: больше путешествовать, купить свой дом...</textarea>
+                            <textarea name="desire" id="desire" rows="3" maxlength="250" placeholder="Например: больше путешествовать, купить свой дом..."></textarea>
                         </div>
                         <form oninput="validate();">
-                                <input type="text" name="fio" id="fio-req" placeholder="ФИО:" required>
-                                <input type="text" name="phone" id="pnone-req" placeholder="Тел:" class="phone" required>
-                                <input type="text" name="mail" onfocus="cleaner();" id="mail-req" placeholder="E-mail:" class="email" required>
+                            <input type="text" name="fio" id="fio-req" placeholder="ФИО:" class="popup-form-input" required>
+                            <input type="text" name="phone" id="pnone-req" placeholder="Тел:" class="phone popup-form-input" required>
+                           <input type="text" name="mail" onfocus="cleaner();" id="mail-req" placeholder="E-mail:" class="email popup-form-input" required>
                                 <button name="execute" id="execute" class="disabled exec gold-word btn upper-case"><p>исполнить быстро</p></button>
                                     <div class="confirm-politic">
                                             <label class="check-mark">
-                                                <input type="checkbox" name="politic-check" checked/>
+                                                <input type="checkbox" class="popup-checkbox" name="politic-check" checked/>
                                                 <img src="./images/check1.png">
                                             </label>
                                              <p class="white-word"> Нажимая на кнопку ИСПОЛНИТЬ БЫСТРО, 

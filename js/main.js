@@ -48,15 +48,12 @@ function showRequest(){
     popupWin.classList.remove('hide-request');
 }
 
-submitBtn.addEventListener("click", () => {
-    //showThanksSub();
-    submitHandler(emailSub);
-});
+submitBtn.addEventListener("click", submitHandler.bind(null, emailSub, "main"));
+execBtn.addEventListener("click", submitHandler.bind(null, emailExec, "popup"));
+
 darkBgThanks.addEventListener("click", hideThanks);
 closetExec.addEventListener("click", hideThanks);
-execBtn.addEventListener("click", function(){
-    submitHandler(emailExec);
-});
+
 function showThanksExec(){
     darkBgThanks.classList.remove('hide-request');
     thanksWin.classList.remove('hide-request');
@@ -102,15 +99,25 @@ switch (target.name) {
 }
 
 function cleaner() {
-    console.log(this.event.target);
     this.event.target.value="";
 }
-
-function submitHandler(emailField) {
+function submitHandler(emailField, formIdentifier, event) {
+    event.preventDefault();
+    const formInputs = document.getElementsByClassName('.'+formIdentifier+'-form-input');
+    if (document.querySelector('.'+formIdentifier+'-checkbox').checked) {
+      event.currentTarget.classList.remove('disabled');
+      if (Array.prototype.every.call(formInputs, (item) => {
+          return !!item.value;
+        })) {
+        validateEmailForSubmit(emailField);
+      }
+    } else event.currentTarget.classList.add('disabled');
+  }
+function validateEmailForSubmit(emailField) {
   if (!emailField.value.match(/^[a-zA-Z0-9][\w/.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w/.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z/.]*[a-zA-Z]$/)) {
     emailField.value = "Incorrect email!";
-    this.event.preventDefault();
-  } else {
+  }
+  else {
     hideRequest();
     showThanksExec();
   }
