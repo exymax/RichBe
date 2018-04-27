@@ -438,7 +438,6 @@ div.request-content input[type="email"]
     height: 50px;
     margin-right: 9px;
     background:transparent;
-    border:2px solid white;
   line-height: 1.2;
   text-align: left;
   color:white;
@@ -686,7 +685,6 @@ div.request-content input[type="text"], div.request-content input[type="email"] 
     height: 59px;
     margin-right: 10px;
     background: transparent;
-    border: 2px solid white;
     line-height: 1.2;
     text-align: left;
     color: white;
@@ -1293,10 +1291,6 @@ div.hide-request{
     span.year-number{
         width:121px;
     }
-    img.rich-man{
-        width:auto;
-        height:880px;
-    }
     img.top-left-angle{
     width:780px;
     height:auto;
@@ -1377,11 +1371,46 @@ div.hide-request{
             font-size: 42px;
         }
 }
+@media screen and (max-width:1450px){
+    img.top-left-angle {
+        width: 693px;
+    }
+    .wrap-head div.guarant .guarant-content {
+        padding-right: 77px;
+        margin-top: 64px;
+    }    
+    .wrap-head div.guarant {
+        background-size: 287px;
+        left: 78px;
+    }
+    img.rich-man {
+        width: auto;
+        height: 699px;
+    }
+    section.your-result h3 {
+        padding-top: 27px;
+        font-size: 25px;
+        position: relative;
+        right: 99px;
+    }
+    section.your-result .inner-wrap {
+        height: 77px;
+        right: -64px;
+        background-size: 976px;
+    }
+  
+}
 
 @media screen and (max-width:1320px){
     footer .inner-footer {
         max-width: 1266px;
         padding-top: 38px;
+    }
+    section.your-result h3 { 
+        right: 11px;
+    }
+    section.your-result .inner-wrap {
+        right: 54px;
     }
 }
     @media screen and (max-width:1305px){
@@ -1409,15 +1438,6 @@ div.hide-request{
         section.our-school-represent h1 {
             margin-top: 50px;
         }
-        section.your-result .inner-wrap {
-            height: 81px;
-            right: 277px;
-        }
-        section.your-result h3 {
-            padding-top: 27px;
-            padding-left: 422px;
-            font-size: 28px;
-        }
     }
     @media screen and (max-width:1270px){
         footer a {
@@ -1435,18 +1455,9 @@ div.hide-request{
         }
     }
     @media screen and (max-width:1250px){
-        section.your-result .inner-wrap {
-            height: 77px;
-            background-size: 1185px;
-        }
         footer .inner-footer {
             max-width: 1183px;
             padding-top: 48px;
-        }
-        section.your-result h3 {
-            padding-top: 27px;
-            padding-left: 422px;
-            font-size: 26px;
         }
         section.about-school ul {
             font-size: 18px;
@@ -1510,8 +1521,8 @@ div.hide-request{
             margin-top: 13px;
         }
         div.bottom-right-angle img {
-            width: 799px;
-            height: 415px;
+            width: 744px;
+            height: 408px;
         }
         div.social-icons ul {
             position: relative;
@@ -1557,6 +1568,59 @@ div.hide-request{
         }
         #page-container div.fs0 {
             font-size: 37px;
+        }
+        section.request .inner-wrap {
+            bottom: -20px;
+        }
+        section.your-result .inner-wrap {
+            right: 54px;
+            background-size: 887px;
+        }
+        section.your-result .inner-wrap {
+            height: 65px;
+        }    
+        section.your-result h3 {
+            padding-top: 22px;    
+            font-size: 21px;
+        }
+        section.about-school .purposes h3 {
+            width: 174px;
+            font-size: 24px;
+        }
+        section.about-school .inner-wrap {
+            padding-left: 0;
+            position: relative;
+            bottom: 28px;
+        }
+        aside.banners .want-banner-wrap {
+            transform: scale(0.85);
+        }
+        aside.banners .selection-banner-wrap {
+            margin-top: -47px;
+            transform: scale(0.85);
+        }
+        header .inner-wrap {
+            top: 34px;
+            transform: scale(0.9);
+        }
+        section.our-school-represent h1 {
+            font-size: 42px;
+        }
+        section.our-school-represent h3 {
+            margin-top: -12px;
+            width: 543px;
+            font-size: 15px;
+        }
+        section.our-school-represent p.our-school-text {
+            margin-top: 23px;
+            width: 434px;
+            font-size: 16px;
+        }
+        section.about-school h3 {
+            font-size: 27px;
+        }
+        section.your-result h3 {
+            right: -79px;
         }
     }
 
@@ -1689,4 +1753,10 @@ div.dark-bg-confid{
     section.request .confid-style{
         display:inline;
         font-size:inherit;
+    }
+    .correct-input{
+        border:2px solid white;
+    }
+    .incorrect-email{
+        border:3px solid red;
     }

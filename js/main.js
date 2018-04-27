@@ -1,4 +1,3 @@
-
 var darkBack=document.querySelector('div.dark-bg');
 var popupWin=document.querySelector('div.request-window');
 var closet=document.querySelector('div.close-popup');
@@ -38,10 +37,18 @@ openRequest1.addEventListener("click", showRequest);
 openRequest2.addEventListener("click", showRequest);
 
 function hideRequest(){
-darkBack.classList.add('hide-request');
-popupWin.classList.add('hide-request');
-emailSub.value = "";
-emailExec.value = "";
+  darkBack.classList.add('hide-request');
+  popupWin.classList.add('hide-request');
+  checkFillIn('main');
+  checkFillIn('popup');
+}
+
+function clearFields(emailField, formIdentifier) {
+  emailField.value = "";
+  const formInputs = document.getElementsByClassName(formIdentifier+'-form-input');
+  Array.prototype.forEach.call(formInputs, (item) => {
+      item.value = "";
+    })
 }
 function showRequest(){
     darkBack.classList.remove('hide-request');
@@ -53,20 +60,19 @@ execBtn.addEventListener("click", submitHandler.bind(null, emailExec, "popup"));
 
 darkBgThanks.addEventListener("click", hideThanks);
 closetExec.addEventListener("click", hideThanks);
-
 function showThanksExec(){
     darkBgThanks.classList.remove('hide-request');
     thanksWin.classList.remove('hide-request');
 }
-function showThanksSub(e){
-   e.preventDefault();
-    darkBgThanks.classList.remove('hide-request');
-    thanksWin.classList.remove('hide-request');
+function showThanksSub(event){
+  event.preventDefault();
+  darkBgThanks.classList.remove('hide-request');
+  thanksWin.classList.remove('hide-request');
 }
 
 function hideThanks(){
-   darkBgThanks.classList.add('hide-request');
-    thanksWin.classList.add('hide-request');
+  darkBgThanks.classList.add('hide-request');
+  thanksWin.classList.add('hide-request');
 }
 
 
@@ -77,48 +83,72 @@ $('.phone').mask('+7 (999) 999-99-99');
 
 const kirylicPattern = /[А-Яа-яЁё\s]+/;
 
-function validate() {
+function validate(formIdentifier) {
+  const target = this.event.target;
+  const eventValue = this.event.data;
+  if (eventValue) {
+    switch (target.name) {
+      case 'fio':
+        validateRussian.call(this);
+        break;
+      case 'mail':
+        if (eventValue.match(kirylicPattern)) {
+          target.value = target.value.slice(0, target.value.length-1);
+        }
+        target.classList.remove('incorrect-email');
+        break;
+    }
+  }
+  checkFillIn(formIdentifier);
+}
+
+function validateRussian(formIdentifier) {
   const target = this.event.target;
   const eventValue = this.event.data;
 
-switch (target.name) {
-    case 'fio':
-      if (!eventValue.match(kirylicPattern)) {
-        target.value = target.value.slice(0, target.value.length-1);
-      }
-      break;
-    case 'mail':
-      console.log(this.event.data);
-      if (eventValue.match(kirylicPattern)) {
-        target.value = target.value.slice(0, target.value.length-1);
-      }
-      break;
-    default: return;
+  if (eventValue) {
+    if (!eventValue.match(kirylicPattern)) {
+      target.value = target.value.slice(0, target.value.length-1);
+    }
   }
-  
+  formIdentifier ? checkFillIn(formIdentifier) : "";
+}
+
+function checkFillIn(formIdentifier) {
+  const formInputs = document.getElementsByClassName(formIdentifier+'-form-input');
+  // console.log(formIdentifier);
+  if (document.querySelector('.'+formIdentifier+'-checkbox').checked) {
+    if (Array.prototype.every.call(formInputs, (item) => {
+        return !!item.value;
+      })) {
+      document.getElementsByClassName(formIdentifier)[0].classList.remove('disabled');
+      return true;
+    }
+  }
+  document.getElementsByClassName(formIdentifier)[0].classList.add('disabled');
+  return false;
 }
 
 function cleaner() {
     this.event.target.value="";
 }
+
 function submitHandler(emailField, formIdentifier, event) {
-    event.preventDefault();
-    const formInputs = document.getElementsByClassName('.'+formIdentifier+'-form-input');
-    if (document.querySelector('.'+formIdentifier+'-checkbox').checked) {
-      event.currentTarget.classList.remove('disabled');
-      if (Array.prototype.every.call(formInputs, (item) => {
-          return !!item.value;
-        })) {
-        validateEmailForSubmit(emailField);
-      }
-    } else event.currentTarget.classList.add('disabled');
+  event.preventDefault();
+  if (checkFillIn(formIdentifier)) {
+    validateEmailForSubmit(emailField, formIdentifier);
   }
-function validateEmailForSubmit(emailField) {
+}
+
+function validateEmailForSubmit(emailField, formIdentifier) {
   if (!emailField.value.match(/^[a-zA-Z0-9][\w/.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w/.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z/.]*[a-zA-Z]$/)) {
-    emailField.value = "Incorrect email!";
+    emailField.classList.add('incorrect-email');
+    // emailField.classList.add('incorrect-email');
+    document.getElementsByClassName(formIdentifier)[0].classList.add('disabled');
   }
   else {
     hideRequest();
+    clearFields(emailField, formIdentifier);
     showThanksExec();
   }
 }
