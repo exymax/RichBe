@@ -1449,8 +1449,8 @@ div.hide-request {
         height: auto;
     }
     div.bottom-right-angle img {
-        width: 867px;
-        height: 483px;
+        /* transform: scale(.97); */
+        transform-origin: 100% 100%;
     }
     footer .inner-footer {
         max-width: 1412px;
@@ -1739,6 +1739,10 @@ div.hide-request {
         height: 418px;
         width: 784px;
     }
+
+    div.wrapper .bottom-right-angle {
+        transform: scale(.6);
+    }
 }
 
 @media screen and (max-width:1220px) {
@@ -1779,6 +1783,34 @@ div.hide-request {
         background-size: 265px;
         left: 37px;
     }
+
+    .wrap-head div.guarant {
+        transform: scale(.5);
+        top: -50px;
+        left: -95px;
+    }
+
+    section.your-result .inner-wrap {
+        margin-top: 10px;
+    }
+
+    section.our-school-represent h1 {
+        margin-top: 20px;
+    }
+
+    .request .inner-wrap {
+        transform: translateY(-20px);
+    }
+
+    section.request .confirm-politic {
+        top: 5px;
+        left: 37px;
+    }
+
+    div.wrapper .rich-man {
+        height: 560px;
+    }
+
     header .inner-wrap .head-title {
         font-size: 26px;
         margin-left: 41px;
@@ -1805,7 +1837,7 @@ div.hide-request {
 }
 
 @media screen and (max-width:1195px) {
-    .top-left-angle {
+    div.wrapper .top-left-angle {
         width: 400px;
     }
     
@@ -1836,11 +1868,7 @@ div.hide-request {
         width: 744px;
         height: 408px;
     }
-    /* div.social-icons ul {
-        position: relative;
-        top: 457px;
-        right: 51px;
-    } */
+
     section.request button {
         width: 159px;
         height: 45px;
@@ -1894,7 +1922,7 @@ div.hide-request {
         height: 65px;
     }
     section.your-result h3 {
-        padding-top: 22px;
+        padding-top: 0;
         font-size: 21px;
     }
     section.about-school .purposes h3 {
@@ -1935,6 +1963,7 @@ div.hide-request {
 }
 
 @media screen and (max-width:1155px) {
+    
     div.request-content button {
         width: 115px;
         height: 38px;
