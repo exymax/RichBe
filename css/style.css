@@ -1159,30 +1159,11 @@ div.hide-request {
         height: 448px;
         width: 816px;
     }
-    /* ul.socials li:nth-child(1) {
-        bottom: 140px;
-        left: 380px;
+
+    div.wrapper .bottom-right-angle {
+        transform: scale(.61);
+        transform-origin: 100% 100%;
     }
-    ul.socials li:nth-child(2) {
-        bottom: 169px;
-        left: 429px;
-    }
-    ul.socials li:nth-child(3) {
-        bottom: 194px;
-        left: 481px;
-    }
-    ul.socials li:nth-child(4) {
-        bottom: 223px;
-        left: 530px;
-    }
-    ul.socials li:nth-child(5) {
-        bottom: 250px;
-        left: 580px;
-    }
-    ul.socials li:nth-child(6) {
-        bottom: 277px;
-        left: 629px;
-    } */
 }
 
 @media screen and (max-width:1585px) {
@@ -1259,6 +1240,15 @@ div.hide-request {
 }
 
 @media screen and (max-width:1585px) {
+    div.wrapper .top-left-angle {
+        width: 580px;
+    }
+
+    div.wrapper .guarant {
+        transform: scale(.8);
+        left: 30px;
+    }
+
     .wrap-head div.guarant .guarant-content {
         padding-right: 63px;
         margin-top: 66px;
@@ -1283,9 +1273,7 @@ div.hide-request {
     .wrap-head div.guarant {
         background-size: 302px;
     }
-    div.wrapper .guarant {
-        left: 151px;
-    }
+
     /*div.bottom-right-angle .bottom-right {
         height: 448px;
         width: 816px;
@@ -1314,114 +1302,23 @@ div.hide-request {
         bottom: 277px;
         left: 629px;
     }*/
-}
 
-@media screen and (max-width:1377px) {
-    div.request-window p.request-text {
-        font-size: 21px;
-        margin-bottom: 43px;
-    }
-    div.request-content div.request-item {
-        margin-bottom: 5.968%;
-    }
-    div.request-content .confirm-politic p {
-        font-size: 16px;
-    }
-    div.request-content .confirm-politic {
-        left: 2px;
-        bottom: 9px;
-    }
-    div.request-content div.request-item:last-child {
-        margin-bottom: 4.9%;
-    }
-    div.request-content button {
-        width: 151px;
-        height: 45px;
-    }
-    div.request-content .btn p {
-        font-size: 15px;
-    }
-    div.request-window .request-content {
-        padding-left: 68px;
-    }
-    div.request-content input[type="text"],
-    div.request-content input[type="email"] {
-        width: 152px;
-        height: 33px;
-        font-size: 16px;
-    }
-    div.request-window {
-        height: 695px;
-    }
-    div.request-window p.request-text {
-        font-size: 20px;
-    }
-    div.request-content div.textarea-title {
-        font-size: 26px;
-    }
-    div.request-content textarea {
-        height: 48px;
-    }
-    div.request-content div.textarea-title {
-        width: 11.8%;
-        height: 77px;
-    }
-    div.request-window .request-content {
-        padding-top: 4.5%;
-    }
-    div.request-content div.request-item {
-        margin-bottom: 3.968%;
-    }
-}
-
-@media screen and (max-width:1350px) {
-    aside .want-banner .banner-img {
-
-    }
-
-    aside .selection-banner h2 {
-        font-size: 23px;
-    }
-
-    aside .selection-banner h2 {
-        font-size: 25px;
-    }
-
-    div.request-window p.request-text {
-        font-size: 18px;
-        margin-bottom: 31px;
-    }
-    div.request-content div.textarea-title {
-        width: 13.8%;
-        height: 70px;
-        font-size: 23px;
-    }
-    div.request-content textarea {
-        width: 62.8%;
-        height: 41px;
-    }
-    div.request-window .request-content {
-        padding-left: 99px;
-    }
-    div.request-window {
-        height: 689px;
-    }
-    div.request-content .confirm-politic p {
-        font-size: 15px;
-    }
-    div.request-content textarea {
-        font-size: 15px;
+    div.wrapper .bottom-right-angle {
+        transform: scale(.61);
+        transform-origin: 100% 100%;
     }
 }
 
 @media screen and (max-width:1530px) {
     div.wrapper .top-left-angle {
-        width: 750px;
+        width: 620px;
     }
 
     .wrap-head div.guarant {
         background-size: 297px;
-        left: 117px;
+        left: 40px;
+        top: -20px;
+        transform: scale(.8);
     }
     #page-container div.fs0 {
         font-size: 47px;
@@ -1464,11 +1361,17 @@ div.hide-request {
     section.your-result .inner-wrap {
         height: 86px;
         right: 106px;
+        background-position-x: -100px;
     }
     section.your-result h3 {
-        padding-top: 27px;
+        padding-top: 3px;
         padding-right: 6px;
         font-size: 29px;
+    }
+
+    .request-contact div.request-content input[type="text"],
+    .request-contact div.request-content input[type="email"] {
+        width: 140px;
     }
 }
 
@@ -1523,7 +1426,7 @@ div.hide-request {
         margin-left: 216px;
         height: 57px;
         background-size: 976px;
-        background-position-x: -54px;
+        background-position-x: -200px;
     }
     /* ul.socials li {
         transform: translate(-85px, 35px) scale(.9);
@@ -1555,7 +1458,7 @@ div.hide-request {
     }
 
     div.request-content textarea {
-        height: 41px;
+        height: 48px;
     }
 
     div.request-content div.request-item {
@@ -1593,6 +1496,63 @@ div.hide-request {
     }
 }
 
+@media screen and (max-width:1377px) {
+    div.request-window p.request-text {
+        font-size: 21px;
+        margin-bottom: 43px;
+    }
+    div.request-content div.request-item {
+        margin-bottom: 5.968%;
+    }
+    div.request-content .confirm-politic p {
+        font-size: 16px;
+    }
+    div.request-content .confirm-politic {
+        left: 2px;
+        bottom: 9px;
+    }
+    div.request-content div.request-item:last-child {
+        margin-bottom: 4.9%;
+    }
+    div.request-content button {
+        width: 151px;
+        height: 45px;
+    }
+    div.request-content .btn p {
+        font-size: 15px;
+    }
+    div.request-window .request-content {
+        padding-left: 68px;
+    }
+    div.request-content input[type="text"],
+    div.request-content input[type="email"] {
+        width: 152px;
+        height: 33px;
+        font-size: 16px;
+    }
+    div.request-window {
+        height: 695px;
+    }
+    div.request-window p.request-text {
+        font-size: 20px;
+    }
+    div.request-content div.textarea-title {
+        font-size: 23px;
+    }
+    div.request-content textarea {
+        height: 48px;
+    }
+    div.request-content div.textarea-title {
+        width: 11.8%;
+        height: 77px;
+    }
+    div.request-window .request-content {
+        padding-top: 4.5%;
+    }
+    div.request-content div.request-item {
+        margin-bottom: 3.968%;
+    }
+}
 
 @media screen and (max-width:1375px) {
     div.wrapper .top-left-angle {
@@ -1628,7 +1588,7 @@ div.hide-request {
     section.request input[type="email"],
     div.request-content input[type="text"],
     div.request-content input[type="email"] {
-        width: 123px;
+        width: 163px;
         height: 42px;
     }
     section.request button {
@@ -1641,6 +1601,46 @@ div.hide-request {
     }
     #page-container div.fs0 {
         font-size: 42px;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    aside .selection-banner h2 {
+        font-size: 23px;
+    }
+
+    aside .selection-banner h2 {
+        font-size: 25px;
+    }
+
+    div.request-window p.request-text {
+        font-size: 18px;
+        margin-bottom: 31px;
+    }
+    div.request-content div.textarea-title {
+        width: 13.8%;
+        height: 70px;
+        font-size: 23px;
+    }
+    div.request-content textarea {
+        width: 62.8%;
+        height: 41px;
+    }
+    div.request-window .request-content {
+        padding-left: 99px;
+    }
+    div.request-window {
+        height: 689px;
+    }
+
+    div.request-content .confirm-politic p {
+        font-size: 15px;
+    }
+
+    div.request-content textarea {
+        font-size: 15px;
+        height: 41px;
+        margin-bottom: 20px;
     }
 }
 
