@@ -15,17 +15,23 @@
     src:url(../fonts/Fonts_RichBe/Akrobat-SemiBold.otf) format('opentype');
 }
 body{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding :0;
 }
-div.wrapper{
-    padding-top:107px;
+
+main {
+    position: relative;
+    z-index: 100;
+}
+
+div.wrapper {
+    overflow: hidden;
     width:100%;
     background:url("../images/bg_page.jpg");
     z-index: 0;
     position:relative;
-    padding-bottom: 20px;
 }
+
 .upper-case{
     text-transform: uppercase;
 }
@@ -47,7 +53,10 @@ div.wrapper .wrap-head{
     height: 730px;
 }
 aside.banners{
-    position: relative;
+    position: absolute;
+    top: 0;
+    z-index: 201;
+    right: 20px;
     width:300px;
     height:710px;
 }
@@ -95,7 +104,8 @@ div.wrapper .guarant-content{
     margin:0 auto;
     margin-top: 92px;
 }
-header div.logo{
+header div.logo {
+    margin-top: 50px;
     display:flex;
     justify-content: space-between;
     font-family:'Akrobat Bold';
@@ -482,16 +492,16 @@ input[name="politic-check"] {
 .check-mark {
     display: block;
     cursor: pointer;
-    position:absolute;
+    position: absolute;
     top: -5px;
     left: -33px;
-    width:22px;
-    height:22px;
-    border:2px solid white;
+    width: 19px;
+    height: 19px;
+    border: 2px solid white;
     border-radius: 50%;
 }
 .check-mark img {
-    width: 22px;
+    width: 18px;
     margin-left: 3px;
     visibility: hidden;
 }
@@ -582,7 +592,7 @@ position: absolute;
 top:0;
 left:0;
 background-color: rgba(0,0,0,0.7);
-z-index: 45;
+z-index: 249;
 }
 /*div.request-window{
     position: absolute;
@@ -601,7 +611,7 @@ div.request-window {
     height: 92.9%;
     background: url(../images/bg_page.jpg);
     margin: 0 auto;
-    z-index: 50;
+    z-index: 250;
     left: 16.25%;
     top: 6.75%;
     margin-top: -1.5%;
@@ -911,7 +921,7 @@ div.hide-request{
             height: auto;
         }
         header .inner-wrap {
-            top: 35px;
+            top: 15px;
         }
         section.our-school-represent h1 {
             font-size: 50px;
@@ -1373,16 +1383,17 @@ div.hide-request{
         }
 }
 @media screen and (max-width:1450px){
-    div.wrapper {
-        padding-top: 90px;
+    main {
+        transform: scale(.9);
     }
 
     section.our-school-represent h1 {
-        margin-top: 53px;
+        margin-top: 5px;
         font-size: 45px;
     }
 
     section.our-school-represent h3 {
+        margin-top: 28px;
         font-size: 16px;
     }
 
@@ -1393,24 +1404,25 @@ div.hide-request{
 
     .banners {
         transform-origin: 0% 0%;
-        transform: scale(.85);
+        transform: scale(.85) translateX(40px);
     }
 
     img.top-left-angle {
-        width: 670px;
+        width: 500px;
     }
     .wrap-head div.guarant .guarant-content {
         padding-right: 77px;
         margin-top: 64px;
     }    
     .wrap-head div.guarant {
-        transform: scale(.88);
+        transform: scale(.7);
         background-size: 287px;
-        left: 63px;
+        left: -40px;
+        top: -35px;
     }
     img.rich-man {
         width: auto;
-        height: 699px;
+        height: 629px;
     }
     section.your-result h3 {
         padding-top: 27px;
@@ -1419,21 +1431,39 @@ div.hide-request{
         right: 99px;
     }
     section.your-result .inner-wrap {
+        margin-left: 216px;
         height: 77px;
         background-size: 976px;
+        background-position-x: -54px;
     }
 
     ul.socials li {
-        transform: translate(-25px, 5px) scale(.9);
+        transform: translate(-85px, 35px) scale(.9);
     }
   
+    div.bottom-right-angle {
+        transform: scale(.8);
+        transform-origin: 100% 100%;
+    }
+
     div.bottom-right-angle .bottom-right {
-        width: 693px;
-        height: 383px;
+        width: 619px;
+        height: 337px;
     }
 }
 
-@media screen and (max-width:1320px){
+@media screen and (max-width:1320px) {
+
+    section.about-school h3 {
+        top: 6px;
+        margin-top: 28px;
+    }
+
+    section.our-school-represent h1 {
+        margin-top: 40px;
+        font-size: 46px;
+    }
+
     footer .inner-footer {
         max-width: 1266px;
         padding-top: 38px;
@@ -1444,217 +1474,234 @@ div.hide-request{
     section.your-result .inner-wrap {
         right: 54px;
     }
+
+    section.your-result .inner-wrap {
+        margin-left: 75px;
+        height: 77px;
+        background-size: 976px;
+        background-position-x: -12px;
+    }
 }
-    @media screen and (max-width:1305px){
-        img.top-left-angle {
-            width: 657px;
-            height: auto;
-        }
-        .wrap-head div.guarant {
-            background-size: 265px;
-            left: 60px;
-        }
-        .wrap-head div.guarant .guarant-content {
-            padding-right: 99px;
-            margin-top: 55px;
-        }
-        .wrap-head div.guarant .guarant-content .guarant-title img {
-            width: 91px;
-        }
-        header .inner-wrap {
-            top:0;
-        }
-        section.our-school-represent h1 {
-            font-size: 50px;
-        }
-        section.our-school-represent h1 {
-            margin-top: 50px;
-        }
+@media screen and (max-width:1305px){
+    img.top-left-angle {
+        width: 607px;
+        height: auto;
     }
-    @media screen and (max-width:1270px){
-        footer a {
-            font-size: 18px;
-        }
-        #page-container div.fs0 {
-            font-size: 39px;
-        }
-        footer .inner-footer {
-            max-width: 1212px;
-        }
-        img.rich-man {
-            width: auto;
-            height: 633px;
-        }
+    .wrap-head div.guarant {
+        transform: scale(.8);
+        background-size: 265px;
+        left: 20px;
     }
-    @media screen and (max-width:1250px){
-        footer .inner-footer {
-            max-width: 1183px;
-            padding-top: 48px;
-        }
-        section.about-school ul {
-            font-size: 18px;
-        }
-        div.bottom-right-angle .bottom-right {
-            height: 418px;
-            width: 784px;
-        }
+
+    img.rich-man {
+        height: 590px;
     }
-    @media screen and (max-width:1215px){
-        .wrap-head div.guarant {
-            background-size: 265px;
-            left: 37px;
-        }
-        header .inner-wrap .head-title {
-            font-size: 26px;
-            margin-left: 41px;
-        }
-        section.our-school-represent h1 {
-            font-size: 46px;
-        }
-        section.our-school-represent h3 {
-            margin-top: -8px;
-            width: 633px;
-            font-size: 18px;
-        }
-        .school-represent .our-school-text {
-            width: 549px;
-            font-size: 20px;
-        }
-        section.about-school .inner-wrap {
-            padding-left: 150px;
-            margin-top: 14px;
-        }
-        footer .inner-footer {
-            max-width: 1156px;
-        }
+
+    .wrap-head div.guarant .guarant-content {
+        padding-right: 99px;
+        margin-top: 55px;
     }
-    @media screen and (max-width:1195px){
-        section.request span {
-            font-size: 25px;
-        }
-        section.request .confirm-politic {
-            margin-top: -21px;
-        }
-        section.request .confirm-politic p{
-            font-size: 19px;
-            margin-left: -15px;
-        }
-        section.request .check-mark img{
-            margin-left: 1px;
-            margin-top: -2px;
-        }
-        section.request .check-mark{
-            top: -2px;
-            left: -43px;
-            width: 20px;
-            height: 20px;
-        }
-        section.request span {
-            margin-top: 13px;
-        }
-        div.bottom-right-angle img {
-            width: 744px;
-            height: 408px;
-        }
-        div.social-icons ul {
-            position: relative;
-            top: 457px;
-            right: 51px;
-        }
-        section.request button {
-            width: 159px;
-            height: 45px;
-        }
-        section.request button p {
-            padding: 3px;
-            font-size: 23px;
-        }
-        section.request input[type="text"],
-        section.request input[type="email"], 
-        div.request-content input[type="text"], 
-        div.request-content input[type="email"]{
-            width: 163px;
-            height: 38px;
-         }
-         section.request .inner-wrap {
-            bottom: -12px;
-            left: 15px;
-        }
-        section.request span {
-            font-size: 23px;
-        }
-        div.bottom-right-angle .bottom-right {
-            width: 745px;
-        }
-        section.about-school h3 {
-            font-size: 32px;
-        }
-        section.about-school ul {
-            font-size: 16px;
-        }
-        aside.banners {
-            left: 50px;
-        }
-        section.about-school .inner-wrap {
-            padding-left: 0;
-        }
-        #page-container div.fs0 {
-            font-size: 37px;
+    .wrap-head div.guarant .guarant-content .guarant-title img {
+        width: 91px;
+    }
+    header .inner-wrap {
+        top:0;
+    }
+    /* section.our-school-represent h1 {
+        margin-top: 40px;
+        font-size: 46px;
+    } */
+    section.our-school-represent h1 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 46px;
+    }
+}
+@media screen and (max-width:1270px){
+    footer a {
+        font-size: 18px;
+    }
+    #page-container div.fs0 {
+        font-size: 39px;
+    }
+    footer .inner-footer {
+        max-width: 1212px;
+    }
+    img.rich-man {
+        width: auto;
+        height: 633px;
+    }
+}
+@media screen and (max-width:1250px){
+    footer .inner-footer {
+        max-width: 1183px;
+        padding-top: 48px;
+    }
+    section.about-school ul {
+        font-size: 18px;
+    }
+    div.bottom-right-angle .bottom-right {
+        height: 418px;
+        width: 784px;
+    }
+}
+@media screen and (max-width:1215px){
+    .wrap-head div.guarant {
+        background-size: 265px;
+        left: 37px;
+    }
+    header .inner-wrap .head-title {
+        font-size: 26px;
+        margin-left: 41px;
+    }
+    section.our-school-represent h1 {
+        font-size: 46px;
+    }
+    section.our-school-represent h3 {
+        margin-top: -8px;
+        width: 633px;
+        font-size: 18px;
+    }
+    .school-represent .our-school-text {
+        width: 549px;
+        font-size: 20px;
+    }
+    section.about-school .inner-wrap {
+        padding-left: 150px;
+        margin-top: 14px;
+    }
+    footer .inner-footer {
+        max-width: 1156px;
+    }
+}
+@media screen and (max-width:1195px){
+    section.request span {
+        font-size: 25px;
+    }
+    section.request .confirm-politic {
+        margin-top: -21px;
+    }
+    section.request .confirm-politic p{
+        font-size: 19px;
+        margin-left: -15px;
+    }
+    section.request .check-mark img{
+        margin-left: 1px;
+        margin-top: -2px;
+    }
+    section.request .check-mark{
+        top: -2px;
+        left: -43px;
+        width: 20px;
+        height: 20px;
+    }
+    section.request span {
+        margin-top: 13px;
+    }
+    div.bottom-right-angle img {
+        width: 744px;
+        height: 408px;
+    }
+    div.social-icons ul {
+        position: relative;
+        top: 457px;
+        right: 51px;
+    }
+    section.request button {
+        width: 159px;
+        height: 45px;
+    }
+    section.request button p {
+        padding: 3px;
+        font-size: 23px;
+    }
+    section.request input[type="text"],
+    section.request input[type="email"], 
+    div.request-content input[type="text"], 
+    div.request-content input[type="email"]{
+        width: 163px;
+        height: 38px;
         }
         section.request .inner-wrap {
-            bottom: -20px;
-        }
-        section.your-result .inner-wrap {
-            right: 54px;
-            background-size: 887px;
-        }
-        section.your-result .inner-wrap {
-            height: 65px;
-        }    
-        section.your-result h3 {
-            padding-top: 22px;    
-            font-size: 21px;
-        }
-        section.about-school .purposes h3 {
-            width: 174px;
-            font-size: 24px;
-        }
-        section.about-school .inner-wrap {
-            padding-left: 0;
-            position: relative;
-            bottom: 28px;
-        }
-        aside.banners .want-banner-wrap {
-            transform: scale(0.85);
-        }
-        aside.banners .selection-banner-wrap {
-            margin-top: -47px;
-            transform: scale(0.85);
-        }
-        header .inner-wrap {
-            top: 34px;
-            transform: scale(0.9);
-        }
-        section.our-school-represent h1 {
-            font-size: 42px;
-        }
-        section.our-school-represent h3 {
-            margin-top: -12px;
-            width: 543px;
-            font-size: 15px;
-        }
-        section.our-school-represent p.our-school-text {
-            margin-top: 23px;
-            width: 434px;
-            font-size: 16px;
-        }
-        section.about-school h3 {
-            font-size: 27px;
-        }
-        section.your-result h3 {
-            right: -79px;
-        }
+        bottom: -12px;
+        left: 15px;
     }
+    section.request span {
+        font-size: 23px;
+    }
+    div.bottom-right-angle .bottom-right {
+        width: 745px;
+    }
+    section.about-school h3 {
+        font-size: 32px;
+    }
+    section.about-school ul {
+        font-size: 16px;
+    }
+    aside.banners {
+        left: 50px;
+    }
+    
+    section.about-school .inner-wrap {
+        padding-left: 0;
+    }
+    #page-container div.fs0 {
+        font-size: 37px;
+    }
+    section.request .inner-wrap {
+        bottom: -20px;
+    }
+    section.your-result .inner-wrap {
+        right: 54px;
+        background-size: 887px;
+    }
+    section.your-result .inner-wrap {
+        height: 65px;
+    }    
+    section.your-result h3 {
+        padding-top: 22px;    
+        font-size: 21px;
+    }
+    section.about-school .purposes h3 {
+        width: 174px;
+        font-size: 24px;
+    }
+    section.about-school .inner-wrap {
+        padding-left: 0;
+        position: relative;
+        bottom: 28px;
+    }
+    aside.banners .want-banner-wrap {
+        transform: scale(0.85);
+    }
+    aside.banners .selection-banner-wrap {
+        margin-top: -47px;
+        transform: scale(0.85);
+    }
+    header .inner-wrap {
+        top: 34px;
+        transform: scale(0.9);
+    }
+    section.our-school-represent h1 {
+        font-size: 42px;
+    }
+    section.our-school-represent h3 {
+        margin-top: -12px;
+        width: 543px;
+        font-size: 15px;
+    }
+    section.our-school-represent p.our-school-text {
+        margin-top: 23px;
+        width: 434px;
+        font-size: 16px;
+    }
+    section.about-school h3 {
+        font-size: 27px;
+    }
+    section.your-result h3 {
+        right: -79px;
+    }
+}
 
 div.dark-bg-popup{
     width:100%;
@@ -1796,11 +1843,11 @@ div.dark-bg-confid{
 
 .footer-rich-link {
     position: absolute;
-    z-index: 10;
+    z-index: 200;
     bottom: 35px;
     right: 30px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Akrobat Regular';
     border-bottom: 2px dashed;
     text-decoration: none;
