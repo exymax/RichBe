@@ -224,12 +224,12 @@ section.about-school h3{
     position: relative;
     top: 18px;
 }
-section.about-school .purposes h3 {
+/* section.about-school .purposes h3 {
     width: 232px;
 }
 section.about-school .novices h3{
     width:148px;
-}
+} */
 div.wrapper .profit-red,
 span.year-number{
     color:red;
@@ -467,7 +467,7 @@ section.request .confirm-politic p,
 div.request-content .confirm-politic p
 {
     font-family: 'Akrobat Regular';
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 25px;
 }
 section.request p.white-word a,
@@ -484,13 +484,14 @@ input[name="politic-check"] {
     cursor: pointer;
     position:absolute;
     top: -5px;
-    left: -37px;
-    width:26px;
-    height:26px;
+    left: -33px;
+    width:22px;
+    height:22px;
     border:2px solid white;
     border-radius: 50%;
 }
 .check-mark img {
+    width: 22px;
     margin-left: 3px;
     visibility: hidden;
 }
@@ -1372,16 +1373,40 @@ div.hide-request{
         }
 }
 @media screen and (max-width:1450px){
+    div.wrapper {
+        padding-top: 90px;
+    }
+
+    section.our-school-represent h1 {
+        margin-top: 53px;
+        font-size: 45px;
+    }
+
+    section.our-school-represent h3 {
+        font-size: 16px;
+    }
+
+    section.our-school-represent p.our-school-text {
+        margin-top: 27px;
+        font-size: 18px;
+    }
+
+    .banners {
+        transform-origin: 0% 0%;
+        transform: scale(.85);
+    }
+
     img.top-left-angle {
-        width: 693px;
+        width: 670px;
     }
     .wrap-head div.guarant .guarant-content {
         padding-right: 77px;
         margin-top: 64px;
     }    
     .wrap-head div.guarant {
+        transform: scale(.88);
         background-size: 287px;
-        left: 78px;
+        left: 63px;
     }
     img.rich-man {
         width: auto;
@@ -1397,7 +1422,15 @@ div.hide-request{
         height: 77px;
         background-size: 976px;
     }
+
+    ul.socials li {
+        transform: translate(-25px, 5px) scale(.9);
+    }
   
+    div.bottom-right-angle .bottom-right {
+        width: 693px;
+        height: 383px;
+    }
 }
 
 @media screen and (max-width:1320px){
@@ -1759,3 +1792,16 @@ div.dark-bg-confid{
     .incorrect-email{
         border:3px solid red;
     }
+
+
+.footer-rich-link {
+    position: absolute;
+    z-index: 10;
+    bottom: 35px;
+    right: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Akrobat Regular';
+    border-bottom: 2px dashed;
+    text-decoration: none;
+}
