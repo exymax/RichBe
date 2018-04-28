@@ -48,6 +48,10 @@ div.wrapper {
     background: url("../images/bg_page.jpg");
     z-index: 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icons {
@@ -172,12 +176,20 @@ div.wrapper .guarant-content {
 }
 
 header div.logo {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     font-family: 'Akrobat Bold';
     font-size: 26px;
     color: rgb(180, 180, 180);
+}
+
+header .logo-subtitle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 23px;
 }
 
 header div.logo img {
@@ -1471,7 +1483,7 @@ div.hide-request {
         font-size: 16px;
     }
     section.our-school-represent p.our-school-text {
-        margin-top: 27px;
+        margin-top: 20px;
         font-size: 18px;
     }
     .banners {
@@ -1486,7 +1498,7 @@ div.hide-request {
         margin-top: 64px;
     }
     .wrap-head div.guarant {
-        transform: scale(.7);
+        transform: scale(.8);
         background-size: 287px;
         left: 48px;
         top: -27px;
@@ -1522,6 +1534,43 @@ div.hide-request {
     div.bottom-right-angle .bottom-right {
         width: 619px;
         height: 337px;
+    }
+
+    div.request-window {
+        height: 610px;
+    }
+
+    div.request-content textarea {
+        margin-bottom: 30px;
+    }
+
+    div.request-window .request-content {
+        padding-top: 1%;
+    }
+
+    div.request-content textarea {
+        height: 48px;
+    }
+
+    div.request-content div.request-item {
+        margin-bottom: 0;
+    }
+
+    div.request-content button {
+        padding-top: 3px;
+        top: -4px;
+        height: 45px;
+    }
+
+    section.request input[type="text"],
+    section.request input[type="email"],
+    div.request-content input[type="text"],
+    div.request-content input[type="email"] {
+        width: 148px;
+    }
+
+    div.request-content .confirm-politic {
+        left: 31px;
     }
 }
 
@@ -2113,6 +2162,7 @@ section.request .confid-style {
 }
 
 .companies-want {
+    margin: 2px 0;
     text-align: center;
     font-size: 14px;
 }
