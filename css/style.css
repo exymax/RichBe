@@ -914,6 +914,12 @@ div.request-content button {
     transform: rotate(-45deg);
 }
 
+.companies-want {
+    margin: 2px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
 @media screen and (max-width: 2500px) {
     div.wrapper .top-left-angle {
         width: 670px;
@@ -1549,7 +1555,7 @@ div.hide-request {
     }
 
     div.request-content textarea {
-        height: 48px;
+        height: 41px;
     }
 
     div.request-content div.request-item {
@@ -1622,7 +1628,7 @@ div.hide-request {
     section.request input[type="email"],
     div.request-content input[type="text"],
     div.request-content input[type="email"] {
-        width: 165px;
+        width: 123px;
         height: 42px;
     }
     section.request button {
@@ -1743,6 +1749,14 @@ div.hide-request {
     div.wrapper .bottom-right-angle {
         transform: scale(.6);
     }
+
+    section.request input[type="text"],
+    section.request input[type="email"],
+    div.request-content input[type="text"],
+    div.request-content input[type="email"] {
+        width: 123px;
+        height: 38px;
+    }
 }
 
 @media screen and (max-width:1220px) {
@@ -1834,6 +1848,14 @@ div.hide-request {
     footer .inner-footer {
         max-width: 1156px;
     }
+
+    ul.socials {
+        transform: translate(54px, 21px) scale(.6);
+    }
+
+    .companies-want {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width:1195px) {
@@ -1852,8 +1874,8 @@ div.hide-request {
         margin-left: -15px;
     }
     section.request .check-mark img {
-        margin-left: 1px;
-        margin-top: -2px;
+        margin-left: 4px;
+        margin-top: 0px;
     }
     section.request .check-mark {
         top: -2px;
@@ -1877,6 +1899,7 @@ div.hide-request {
         padding: 3px;
         font-size: 23px;
     }
+
     section.request input[type="text"],
     section.request input[type="email"],
     div.request-content input[type="text"],
@@ -1884,6 +1907,7 @@ div.hide-request {
         width: 163px;
         height: 38px;
     }
+
     section.request .inner-wrap {
         bottom: -12px;
         left: 15px;
@@ -2188,10 +2212,4 @@ section.request .confid-style {
     font-family: 'Akrobat Regular';
     border-bottom: 2px dashed;
     text-decoration: none;
-}
-
-.companies-want {
-    margin: 2px 0;
-    text-align: center;
-    font-size: 14px;
 }
