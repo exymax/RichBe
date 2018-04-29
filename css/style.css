@@ -46,6 +46,8 @@ div.wrapper {
     width: 100%;
     height: 100%;
     background: url("../images/bg_page.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 0;
     position: relative;
     display: flex;
@@ -756,13 +758,13 @@ div.request-window {
     position: fixed;
     width: 67.5%;
     max-width: 1297px;
-    height: 92.9%;
+    height: auto;
     background: url(../images/bg_page.jpg);
     margin: 0 auto;
     z-index: 250;
-    left: 16.25%;
-    top: 6.75%;
-    margin-top: -1.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 div.request-window .request-top-left {
@@ -797,11 +799,11 @@ div.request-window .request-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 6.5%;
+    padding-top: 1.5%;
 }
 
 div.request-window p.request-text {
-    margin-bottom: 8.55%;
+    margin: 1% 0 2%;
     width: 87%;
     height: 10.1%;
 }
@@ -809,14 +811,14 @@ div.request-window p.request-text {
 div.request-window p.request-text,
 div.request-content div.textarea-title {
     font-family: "Akrobat ExtraBold";
-    font-size: 30px;
+    font-size: 25px;
     text-align: left;
     color: white;
 }
 
 div.request-content div.textarea-title {
     width: 13.8%;
-    height: 90px;
+    height: 75px;
     background: #f7de8f;
     text-transform: uppercase;
     color: black;
@@ -830,7 +832,7 @@ div.request-content div.textarea-title {
 
 div.request-content div.request-item {
     height: 11.95%;
-    margin-bottom: 7.968%;
+    margin-bottom: 4%;
 }
 
 div.request-content textarea {
@@ -840,13 +842,13 @@ div.request-content textarea {
     color: white;
     float: left;
     font-size: 20px;
-    height: 60px;
+    height: 46px;
     width: 78.8%;
     padding: 20px;
 }
 
 div.request-content div.last {
-    margin-bottom: 7.22%;
+    margin-bottom: 4%;
 }
 
 div.request-content input[type="text"],
@@ -854,7 +856,7 @@ div.request-content input[type="email"] {
     font-family: 'Akrobat Regular';
     font-size: 22px;
     width: 202px;
-    height: 59px;
+    height: 50px;
     margin-right: 10px;
     background: transparent;
     line-height: 1.2;
@@ -864,7 +866,7 @@ div.request-content input[type="email"] {
 
 div.request-content button {
     width: 28.67%;
-    height: 65px;
+    height: 58px;
     top: 1px;
     padding: 3px;
 }
@@ -983,22 +985,22 @@ div.request-content button {
         width: 66.5%;
     }
     div.request-content .confirm-politic {
-        left: 54px;
+        left: 32px;
     }
     div.request-content .confirm-politic p {
         font-size: 16px;
     }
     div.request-window {
-        height: 929px;
+        height: auto;
     }
     div.request-window p.request-text {
-        margin-bottom: 4.55%;
+        margin-bottom: 2%;
     }
     div.request-content div.last {
         margin-bottom: 8.22%;
     }
     div.request-content div.request-item {
-        margin-bottom: 4.968%;
+        margin-bottom: 3%;
     }
     #page-container div.fs0 {
         font-size: 50px;
@@ -1008,7 +1010,7 @@ div.request-content button {
 div.hide-request {
     display: none;
 }
-
+ 
 @media screen and (max-width:1760px) {
     .wrap-head div.guarant {
         background-size: 340px 243px;
@@ -1018,10 +1020,10 @@ div.hide-request {
         height: 542px;
         width: 975px;
     }
-    .wrap-head div.guarant .guarant-content {
+    /* .wrap-head div.guarant .guarant-content {
         padding-right: 25px;
         margin-top: 78px;
-    }
+    } */
     img.rich-man {
         width: auto;
         height: 920px;
@@ -1039,7 +1041,27 @@ div.hide-request {
     }
 }
 
+@media screen and (min-width: 1681px) {
+    div.wrapper .bottom-right-angle {
+        transform: scale(.6);
+        transform-origin: 100% 100%;
+    }
+
+    ul.socials {
+        transform: translate(-34px, -8px) scale(.8);
+    }
+}
+
 @media screen and (max-width:1680px) {
+    div.wrapper .top-left-angle {
+        width: 630px;
+    }
+
+    .wrap-head div.guarant {
+        transform: scale(.8);
+        left: 30px;
+    }
+
     div.bottom-right-angle .bottom-right {
         height: 537px;
         width: 959px;
@@ -1166,7 +1188,35 @@ div.hide-request {
     }
 }
 
+@media screen and (min-width: 1586px) {
+    span.year-number {
+        width: 180px;
+        transform: scale(.85) translateY(-5px);
+    }
+
+    div.wrapper .guarant-content {
+        margin-top: 85px;
+        transform: translateX(-12px);
+    }
+}
+
+@media screen and (min-width: 1761px) {
+    div.wrapper .guarant {
+        transform: scale(.8);
+        left: -19px;
+        top: -15px;
+    }
+
+    div.wrapper .guarant-content {
+        transform: translateX(0);
+    }
+}
+
 @media screen and (max-width:1585px) {
+    div.wrapper .top-left-angle {
+        width: 600px;
+    }
+
     div.request-window .request-content {
         padding-left: 108px;
     }
@@ -1203,7 +1253,7 @@ div.hide-request {
         font-size: 20px;
     }
     div.request-content .confirm-politic {
-        left: 74px;
+        left: 32px;
         bottom: 8px;
     }
     div.request-content .btn p {
@@ -1216,13 +1266,13 @@ div.hide-request {
         font-size: 17px;
     }
     div.request-window {
-        height: 695px;
+        height: auto;
     }
     div.request-window p.request-text {
         font-size: 20px;
     }
     div.request-content div.textarea-title {
-        font-size: 26px;
+        font-size: 23px;
     }
     div.request-content textarea {
         height: 48px;
@@ -1232,7 +1282,7 @@ div.hide-request {
         height: 77px;
     }
     div.request-window .request-content {
-        padding-top: 4.5%;
+        padding-top: 2.5%;
     }
     div.request-content div.request-item {
         margin-bottom: 3.968%;
@@ -1375,6 +1425,40 @@ div.hide-request {
     }
 }
 
+@media screen and (min-width: 1451px) {
+    section.our-school-represent h1 {
+        margin: 40px 0;
+    }
+
+    section.your-result .inner-wrap {
+        height: 60px;
+        right: 31px;
+        background-position-x: -267px;
+    }
+
+    section.your-result h3 {
+        padding-left: 182px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .wrap-head div.guarant {
+        transform: scale(.8);
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 1531px) {
+    section.your-result h3 {
+        padding-top: 0;
+    }
+
+    section.request .inner-wrap {
+        margin-top: 15px;
+    }
+}
+
 @media screen and (max-width:1450px) {
     div.wrapper .top-left-angle {
         width: 620px;
@@ -1431,7 +1515,7 @@ div.hide-request {
     /* ul.socials li {
         transform: translate(-85px, 35px) scale(.9);
     } */
-    div.bottom-right-angle {
+    div.wrapper .bottom-right-angle {
         transform: scale(.75);
         transform-origin: 100% 100%;
     }
@@ -1508,7 +1592,7 @@ div.hide-request {
         font-size: 16px;
     }
     div.request-content .confirm-politic {
-        left: 2px;
+        left: 32px;
         bottom: 9px;
     }
     div.request-content div.request-item:last-child {
@@ -1546,11 +1630,11 @@ div.hide-request {
         width: 11.8%;
         height: 77px;
     }
-    div.request-window .request-content {
+    /* div.request-window .request-content {
         padding-top: 4.5%;
-    }
+    } */
     div.request-content div.request-item {
-        margin-bottom: 3.968%;
+        margin-bottom: 2.968%;
     }
 }
 
@@ -1630,7 +1714,7 @@ div.hide-request {
         padding-left: 99px;
     }
     div.request-window {
-        height: 689px;
+        height: auto;
     }
 
     div.request-content .confirm-politic p {
@@ -1799,7 +1883,7 @@ div.hide-request {
     }
 
     .wrap-head div.guarant {
-        transform: scale(.5);
+        transform: scale(.6);
         top: -50px;
         left: -95px;
     }
@@ -1986,6 +2070,15 @@ div.hide-request {
     }
 }
 
+@media screen and (min-width: 1155px) and (max-width: 1195px) {
+    section.request input[type="text"],
+    section.request input[type="email"],
+    div.request-content input[type="text"],
+    div.request-content input[type="email"] {
+        width: 122px;
+    }
+}
+
 @media screen and (max-width:1155px) {
     
     div.request-content button {
@@ -1994,6 +2087,15 @@ div.hide-request {
     }
     div.request-content .btn p {
         font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1116px) and (max-width: 1155px) {
+    section.request input[type="text"],
+    section.request input[type="email"],
+    div.request-content input[type="text"],
+    div.request-content input[type="email"] {
+        width: 123px;
     }
 }
 
@@ -2125,9 +2227,9 @@ div.confid-popup {
     background: white;
     margin: 0 auto;
     z-index: 250;
-    left: 25.75%;
-    top: 6.75%;
-    margin-top: -1.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 50px;
 }
 
@@ -2175,7 +2277,7 @@ div.dark-bg-confid {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 200;
+    z-index: 250;
 }
 
 .confid-style {
